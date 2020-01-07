@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio</title>
+        <link href="style.css" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <script>
+                /*Animation apparition de la sidebar------------------------------------------------------------------------*/
+                function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle('active');
+    }
+    /*Animation transformation de l'icône menu en barre après le clic-----------------------------------------------*/
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+    </script>
+    <body>
+        <main>
+                <div id="sidebar">
+                        <div class="toggle-btn" onclick="myFunction(this); toggleSidebar();">
+                                <span class=bar1></span>
+                                <span class=bar2></span>
+                                <span class=bar3></span>
+                        </div>
+                        <ul>
+                            
+                        
+                                    <li><a href=".name">ACCUEIL</a></li>
+                                    <li><a href="#TitreAPropos">A PROPOS</a></li>
+                                    <li><a href="#TitreCompetences">COMPETENCES</a></li>
+                                    <li><a href="#">REALISATION</a></li>
+                                    <li><a href="#">EXPERIENCE</a></li>
+                                    <li><a href="#">DIPLOMES</a></li>
+                                    <li><a href="#">HOBBIES</a></li>
+                                    <li><a href="#">CONTACT</a></li>
+                                
+                            
+                        </ul>
+                    </div>
+            <header>
+                <p class="name">PIERRE THOMAIN</p>
+                <hr />
+                <p class="animation A big">CV DEVELOPPEUR WEB JUNIOR</p>
+            </header>
+            <!--<nav>
+                <ul>
+                    <li>ACCUEIL</li>
+                    <li>A PROPOS</li>
+                    <li>COMPETENCES</li>
+                    <li>REALISATIONS</li>
+                    <li>EXPERIENCE</li>
+                    <li>DIPLOMES</li>
+                    <li>HOBBIES</li>
+                    <li>CONTACT</li>
+                </ul>
+            </nav>-->
+            <section>
+                <article>
+                    <h1 id="TitreAPropos">A PROPOS</h1>
+                        <div id="board">
+                            <div id="content">
+                                <p id="title">Episode V</p>
+                                <p id="subtitle">L'Etudiant Contre Attaque</p>
+                                <br/>
+                                <p id="text">
+                                    Développeur web curieux, autonome,
+                                    rigoureux, j'aime les applications simples
+                                    et efficaces. Un sens de l’écoute et du
+                                    service renforcé par 10 années d’expérience
+                                    en milieu professionnel. J’ai eu l’occasion
+                                    de travailler sur des projets variés, qui
+                                    m’ont permis de développer une vrais
+                                    expertise technique en constante progression
+                                    grâce à une formation perpetuelle. Motivé
+                                    par le besoin de faire toujours mieux et
+                                    fondé sur de solides bases acquises lors de
+                                    ma formation, je prends plaisir à relever de
+                                    nouveaux challenges.<br /><br /><br />
+                                    <img
+                                        id="photoPierre"
+                                        src="dossierimage/Photo_Pierre.png"
+                                        alt="Photo_Pierre"
+                                    />
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </article>
+                <article>
+                    <h1 id="TitreCompetences">COMPETENCES</h1>
+                    <h4>Autodidacte, une vraie soir d'apprendre</h4>
+                    <div class="boiteFlexibleGénérale">
+                            <div class="boiteFlexibleSecondaire">
+                                <div class="boiteFlexible1">
+                                    <div class="element1" id="enteteFrontEnd"><img id="animationFE" src="dossierimage/front-end.svg" alt="Compétences Front-End"></div>
+                                    <div class="element2">
+                                            <p>Front-End</p>
+                                            <div class="compFE">
+                                            <img src="dossierimage/800px-HTML5_logo_and_wordmark.svg (1) PIT.png" alt="HTML">
+                                            <img src="dossierimage/CSS3_logo_and_wordmark.svg" alt="CSS">
+                                            <img src="dossierimage/JavaScript_logo_2.svg.png" alt="JS">
+                                            <img src="dossierimage/jquery (1).png" alt="jQuery">
+                                            <img src="dossierimage/wordpress.png" alt="Wordpress">
+                                            <img src="dossierimage/RWDResponsive.png" alt="Responsive Web Design">
+                                            </div>
+                                    </div>
+                                    <hr class="element3" id="traitFrontEnd">
+                                </div>
+                                <div class="boiteFlexible2">
+                                    <div class="element1" id="enteteBackEnd"><img id="animationBE" src="dossierimage/engrenage.svg" alt="Compétences Back-End"></div>
+                                    <div class="element2">
+                                            <p>Back-End</p>
+                                            <div class="compBE">
+                                                    <img src="dossierimage/PHP-logo.svg" alt="PHP">
+                                                    <img src="dossierimage/logo-mysql-170x115.png" alt="MySQL">
+                                                    <img src="dossierimage/wordpress.png" alt="Wordpress">
+                                            </div>
+                                    </div>
+                                    <hr class="element3" id="traitBackEnd">
+                                </div>
+                                <div class="boiteFlexible3">
+                                    <div class="element1" id="enteteTransverses"><img id="animationTransverses" src="dossierimage/plus.svg" alt="Compétences Transverses"></div>
+                                    <div class="element2">
+                                            <p>Transverses</p>
+                                            <div class="compT">
+                                                    <img src="dossierimage/scrum.svg" alt="Méthode Agile">
+                                                    <img src="dossierimage/UI_UX.png" alt="UI-UX">
+                                                    <img src="dossierimage/microsoft-office.jpg" alt="Microsoft Pack Office">
+                                                    <img src="dossierimage/ubuntu.jpeg" alt="Linux Ubuntu">
+                                                    <img src="dossierimage/Figma.png" alt="Figma">
+                                                    <img src="dossierimage/UML_logo.svg.png" alt="UML">
+                                            </div>
+                                    </div>
+                                    <hr class="element3" id="traitTransverses">
+                                </div>
+                                <div class="boiteFlexible4">
+                                    <div class="element1" id="enteteRelationnelles"><img id="animationRelationnelles" src="dossierimage/hand-shake.svg" alt="Compétences Relationnelles"></div>
+                                    <div class="element2">
+                                            <p>Relationnelles</p>
+                                            <div class="compR">
+                                                    <p>Efficacité | Autonomie | Réflexivité</p>
+                                            </div>
+             
+                                    </div>
+                                    <hr class="element3" id="traitRelationnelles">
+                                </div>         
+                    <div class="comp">
+                        <p>HTML</p>
+                        <div class="conteneur-barre">
+                            <span class="barre HTML">50%</span>
+                        </div>
+                    </div>
+                    <div class="comp">
+                        <p>CSS</p>
+                        <div class="conteneur-barre">
+                            <span class="barre CSS">60%</span>
+                        </div>
+                    </div>
+                    <div class="comp">
+                        <p>JS</p>
+                        <div class="conteneur-barre">
+                            <span class="barre JS">30%</span>
+                        </div>
+                    </div>
+                    <div class="comp">
+                        <p>PHP</p>
+                        <div class="conteneur-barre">
+                            <span class="barre php">5%</span>
+                        </div>
+                    </div>
+                    <div class="comp">
+                        <p>MySQL</p>
+                        <div class="conteneur-barre">
+                            <span class="barre MySQL">5%</span>
+                        </div>
+                    </div>
+
+                    <div class="comp">
+                        <p>VBA</p>
+                        <div class="conteneur-barre">
+                            <span class="barre VBA">75%</span>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </article>
+                <article>
+                    <h1>REALISATIONS</h1>
+                    <h4>Une sélection de projets parmis les plus récents</h4>
+                    <div id="boiteFlexibleRealisations">
+                        <div class="projContainer">
+                            <img
+                                src="dossierimage/Aquitaine Landes Récifs 2.png"
+                            />
+                            <div class="projInfoContainer">
+                                <h2>Projet 1</h2>
+                                <p class="projCat">Site Internet - Atlantique Landes Récifs</p>
+                                <p class="projSpec">
+                                    Refonte du site internet d'une association Landaise impliquée dans la préservation de la faune et de la flore marine.<br>
+                                <a href="">En savoir plus</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="projContainer">
+                            <img
+                                src="dossierimage/Aquitaine Landes Récifs 2.png"
+                            />
+                            <div class="projInfoContainer">
+                                <h2>Projet 2</h2>
+                                <p class="projCat">Category</p>
+                                <p class="projSpec">
+                                    Stuff about this project.<br />More stuff
+                                    about it, too
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="projContainer">
+                            <img
+                                src="dossierimage/Aquitaine Landes Récifs 2.png"
+                            />
+                            <div class="projInfoContainer">
+                                <h2>Projet 3</h2>
+                                <p class="projCat">Category</p>
+                                <p class="projSpec">
+                                    Stuff about this project.<br />More stuff
+                                    about it, too
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="projContainer">
+                            <img
+                                src="dossierimage/Aquitaine Landes Récifs 2.png"
+                            />
+                            <div class="projInfoContainer">
+                                <h2>Projet 4</h2>
+                                <p class="projCat">Category</p>
+                                <p class="projSpec">
+                                    Stuff about this project.<br />More stuff
+                                    about it, too
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h1>EXPERIENCES</h1>
+                    <h4>
+                        Polyvalent, je m'adapte rapidement au contexte
+                        professionnel
+                    </h4>
+
+                    <div class="container">
+                        <div class="timeline-block timeline-block-right">
+                            <div class="marker"></div>
+                            <div class="timeline-content">
+                                <h3>Septembre 2019- Juin 2020</h3>
+                                <span>Titre Professionnel niveau III - Développeur Web et Web mobile</span>
+                                <p>
+                                        Formation de 8 mois donnant accès au titre professionnel de niveau 3 - Développeur web et web mobile.
+                                        Le programme est accès autour de 2 axes : développer la partie front-end et la partie back-end d'une
+                                        application web et web mobile. Un focus particulier est apporté aux exigences techniques (du
+                                        référentiel (bonnes pratiques de coding) mais aussi à la maîtrise du vocabulaire technique en langue
+                                        anglaise ainsi qu'a la comprehension et la mise en oeuvre des recommandations de sécurité émises par
+                                        l'ANSSI.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-block timeline-block-left">
+                            <div class="marker"></div>
+                            <div class="timeline-content">
+                                <h3>Mars 2019 - Juillet 2019</h3>
+                                <span>EURALIS (Technicien de Laboratoire en Biologie Moléculaire)</span>
+                                <p>
+                                        Extraction d'ADN graine à graine ou sur bulks de graines, détection de présence fortuite d'OGM
+                                        (qPCR), contrôle des lots de semences Restaureur pour la production de semences hybrides (PCR).
+                                        Détermination des taux d’assemblage de semences. Utilisation du logiciel Solution (LIMS laboratoire).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-block timeline-block-right">
+                            <div class="marker"></div>
+                            <div class="timeline-content">
+                                <h3>Mai 2008 - Décembre 2018</h3>
+                                <span>SYNGENTA (Technien de laboratoire en Biologie Moléculaire)</span>
+                                <p>
+                                        Extraction d’ADN, détection de présence fortuite d’OGM (qPCR), analyses de pureté variétale
+                                        (contrôle des lignées pour la production de semence hybrides)
+                                        Interprétation, validation et valorisation des résultats obtenus
+                                        Gestion métrologique d’un parc d’équipements (Base de données ~120 machines avec gestion du
+                                        calendrier des maintenances préventives et curatives à réaliser)
+                                        Gestion des stocks de réactifs et consommables divers (Base de données ~200 consommables,
+                                        réactifs et 10 fournisseurs différents). Création de macros Excel pour l'automatisation de
+                                        tâches complexes. Création d'un logiciel sous VBA excel pour assurer la gestion des stocks de
+                                        consommables laboratoire. Création d'un logiciel de GMAO (Gestion des Maintenances Assistée par
+                                        Ordinateur) pour le suivi des maintenances préventives et curatives d'un parc de 200
+                                        équipements.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-block timeline-block-left">
+                            <div class="marker"></div>
+                            <div class="timeline-content">
+                                <h3>Juillet 2007 - Décembre 2007</h3>
+                                <span>MONSANTO (Technicien de Laboratoire en Biologie Moléculaire)</span>
+                                <p>
+                                        Extraction d'ADN, sélection assistée par marqueurs (marqueurs diagnostics, QTL) sur semences de
+                                        grandes cultures (Maïs, Tournesol, Colza, Blé, Orge, ...).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-block timeline-block-right">
+                            <div class="marker"></div>
+                            <div class="timeline-content">
+                                <h3>Septembre 2005 - Juin 2007</h3>
+                                <span>Master Microbiologie (Université Vivor Segalen Bordeaux II)</span>
+                                <p>
+                                        Formation pluri-disciplinaire sur 2 ans qui m'a permis d’acquérir les connaissances conceptuelles et
+                                        technologiques les plus récentes dans les domaines de la biologie, de la santé, et des
+                                        dysfonctionnements pathologiques, et de développer les compétences pour leur communication, leur
+                                        utilisation et leur mise en œuvre en Recherche et/ou Développement au sein de laboratoires.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-block timeline-block-left">
+                                <div class="marker"></div>
+                                <div class="timeline-content">
+                                    <h3>Septembre 2002 - Juin 2005</h3>
+                                    <span>Licence Biologie Cellulaire et Physiologie</span>
+                                    <p>
+                                            Formation pluri-disciplinaire offrant une formation théorique et pratique en biologie qui m'a permis
+                                            de développer une solide culture générale dans le domaine des sciences de la vie, en insistant sur
+                                            les aspects modernes de la discipline avec un enseignement approfondi notamment en biologie
+                                            cellulaire et moléculaire, biologie et physiologie animale et végétale et neurobiologie.
+                                    </p>
+                                </div>
+                            </div>
+                    </div>
+                </article>
+                <article>
+                    <h1>DIPLÔMES</h1>
+                    <h4>Pluridisciplinarité, méthode scientifique</h4>
+                    <!--<p id="licence">
+                        Licence de Biologie Cellulaire et Physiologie
+                    </p>
+                    <p id="master">Master de Microbiologie</p>
+                    <p id="titrePro">
+                        Titre professionnel de niveau III - Développeur Web et
+                        Web Mobile
+                    </p>-->
+                    <div id="boiteFlexibleDiplomes">
+                        <div class="un">2005<br>Licence de Biologie Cellulaire et Physiologie</div>
+                        <div class="deux">2007<br>Master de Microbiologie</div>
+                        <div class="trois">2019<br>Titre Professionnel de niniveau III - Développeur Web et Web Mobile</div>
+                    </div>
+                </article>
+                <article>
+                    <h1>HOBBIES</h1>
+                    <h4>
+                        Des goûts éclectiques, l'envie de faire et
+                        d'expérimenter
+                    </h4>
+                    <div class="centreInteret">
+                        <figure class="interet">
+                            <img
+                                src="https://images-na.ssl-images-amazon.com/images/I/61F-Epj6A9L._SL1104_.jpg"
+                                alt="Football"
+                            />
+                            <figcaption>
+                                <b>FOOTBALL</b><br />
+                                (Ligue Occitanie - Niveau Régional 3)
+                            </figcaption>
+                        </figure>
+                        <figure class="interet">
+                            <img
+                                src="https://images.sudouest.fr/2017/04/10/58eb8b2766a4bd4f261d1230/widescreen/1000x500/on-peut-observer-le-pic-du-midi-d-ossau-l-emblematique-montagne-des-pyrenees-bearnaises-sous-toutes-les-coutures.jpg?v1"
+                                alt="Randonnées"
+                            />
+                            <figcaption>
+                                <b>RANDONNEES</b><br />(Vallée d'Aspe, d'Ossau,
+                                ...)
+                            </figcaption>
+                        </figure>
+                        <figure class="interet">
+                            <img
+                                src="https://media.nouvelobs.com/ext/uri/sreferentiel.nouvelobs.com/file/rue89/a633857a1a16f63ebdf3324e86038c64.jpg"
+                                alt="Lecture"
+                            />
+                            <figcaption>
+                                <b>LECTURE</b><br />
+                                (Science Fiction, Biographie, ...)
+                            </figcaption>
+                        </figure>
+
+                        <figure class="interet">
+                            <img
+                                src="data:image/jpeg;base64,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"
+                                alt="Loisirs Créatifs"
+                            />
+                            <figcaption>
+                                <b>LOISIRS CREATIFS</b><br />
+                                (Origami, Kirigami, ...)
+                            </figcaption>
+                        </figure>
+                    </div>
+                </article>
+                <article>
+                    <h1>CONTACT</h1>
+                    <h4>N'hésitez pas à me contacter !</h4>
+                    <div class="boiteFlexibleGénéraleContact">
+                            <div class="boiteFlexibleSecondaireContact">
+                                <div class="boiteFlexible1Contact">
+                                    <div class="element1Contact" id="enteteTelephone"><img id="animationTelephone" src="dossierimage/smartphone.svg" alt="Compétences Front-End"></div>
+                                    <div class="element2Contact">
+                                            <p>+33 6 73 87 65 46</p>                                                                                       
+                                    </div>
+                                    <hr class="element3Contact" id="traitTelephone">
+                                </div>
+                                <div class="boiteFlexible2Contact">
+                                    <div class="element1Contact" id="enteteMail"><img id="animationMail" src="dossierimage/email.svg" alt="Compétences Back-End"></div>
+                                    <div class="element2Contact">
+                                            <p>pierrethomain@yahoo.fr</p>
+                                    </div>
+                                    <hr class="element3Contact" id="traitMail">
+                                </div>
+                                <div class="boiteFlexible3Contact">
+                                    <div class="element1Contact" id="enteteAdresse"><img id="animationAdresse" src="dossierimage/placeholder-for-map.svg" alt="Compétences Transverses"></div>
+                                    <div class="element2Contact">
+                                            <p>10 Bis avenue d'Aspe<br> 64400 BIDOS</p>
+                                    </div>
+                                    <hr class="element3Contact" id="traitAdresse">
+                                </div>
+                            </div>
+                            <div id="CV">
+                                    <img class="CV" src="dossierimage/photoCVPierre.png"
+                                         alt="CV Pierre">
+                                    <p>Téléchargez le CV</p>
+                            </div>
+                            <p><a class="formulaireContact" href="">ACCES AU FORMULAIRE DE CONTACT</a></p>
+
+                    <!--<div id="boiteFlexibleFormulaire">
+                            <div class="BFC3">
+                            <div class="formulaireContact">
+                               
+                                <p><a href="">ACCES AU FORMULAIRE DE CONTACT</a></p>
+                            </div>
+                            <div class="frameCV">
+                                <img
+                                    class="CV"
+                                    src="dossierimage/photoCVPierre.png"
+                                    alt="CV PIERRE"
+                                />
+                                <p>Télécharger le CV</p>
+                            </div>
+                        </div>
+                    </div>-->
+                </article>
+            </section>
+            <footer>
+                <section id="boiteFlexibleFooter">
+                    <img
+                        class="imagesFooter"
+                        src="dossierimage/icons8-facebook.svg"
+                        alt="logo_facebook"
+                    />
+                    <img
+                        class="imagesFooter"
+                        src="dossierimage/icons8-linkedin.svg"
+                        alt="logo_linkedin"
+                    />
+                    <img
+                        class="imagesFooter"
+                        src="dossierimage/icons8-github.svg"
+                        alt="logo_github"
+                    />
+                </section>
+                <div>
+                    <p>
+                        CV développeur Junior copyright 2019 Pierre Thomain -
+                            mentions légales
+                    </p>
+                </div>
+            </footer>
+        </main>
+        <script src="dossierjs/javascript.js">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,2349 @@
+html,
+body,
+main {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+h1,
+h4 {
+    text-align: center;
+    padding-top: 20px;
+}
+header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 30%;
+    color: white;
+    opacity: 0.8;
+}
+.name {
+    font-size: 2em;
+    font-style: bold;
+}
+
+hr {
+    width: 24%;
+    height: 0.1vh;
+    background-color: white;
+}
+/*nav,
+ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    background-color: rgb(85, 93, 94);
+    color: rgb(187, 181, 181);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 6vh;
+}
+nav ul li:hover {
+    color: yellow;
+}*/
+
+/*Menu Déroulant (Sidebar)-------------------------------------------------------------------*/
+#sidebar {
+    position: fixed;
+    width: 270px;
+    height: 100vh;
+    background:grey;
+    left: -270px;
+    transition: all 400ms linear;
+    z-index: 10000;
+}
+#sidebar.active {
+    left: 0px;
+}
+#sidebar ul li {
+    color: white;
+    padding: 11px 10px;
+    border-bottom: 1px solid white;
+    text-align: left;
+}
+#sidebar li:hover a{
+    color: yellow;
+}
+#sidebar ul li a {
+    text-decoration: none;
+    font-size: 2em;
+    color: white;
+}
+#sidebar .toggle-btn {
+    position: absolute;
+    left: 310px;
+    top: 20px;
+}
+#sidebar .toggle-btn span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background: white;
+    margin: 6px 0px;
+    border-radius: 15px;
+}
+/*Script pour transformer l'icône du menu de navigation en croix---------------------------------------------*/
+.toggle-btn {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+}
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+section article:nth-child(1) {
+    background-color: black;
+    width: 100%;
+    height: 63vh;
+}
+section article:nth-child(2) {
+    background-color: #c4c4c4;
+    width: 100%;
+    height: 130vh;
+}
+section article:nth-child(3) {
+    background-color: #d3d3d3;
+    width: 100%;
+    height: 70vh;
+}
+section article:nth-child(4) {
+    background-color: #c4c4c4;
+    width: 100%;
+    height: 135vh;
+}
+section article:nth-child(5) {
+    background-color: #d3d3d3;
+    width: 100%;
+    height: 70vh;
+}
+section article:nth-child(6) {
+    background-color: #c4c4c4;
+    width: 100%;
+    height: 60vh;
+}
+section article:nth-child(7) {
+    background-color: #d3d3d3;
+    width: 100%;
+    height: 140vh;
+}
+/*---------------------------------------------------------------------------------*/
+/*Timeline*/
+h1 {
+    text-align: center;
+    font-weight: 300;
+    color: #777;
+}
+
+h1 span {
+    font-weight: 600;
+}
+
+.container {
+    width: 80%;
+    padding: 50px 0;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    width: 5px;
+    height: 100%;
+    background: white;
+    z-index: 1;
+}
+
+.timeline-block {
+    width: -webkit-calc(50% + 8px);
+    width: -moz-calc(50% + 8px);
+    width: calc(50% + 8px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    clear: both;
+}
+
+.timeline-block-right {
+    float: right;
+}
+
+.timeline-block-left {
+    float: left;
+    direction: rtl;
+}
+
+.marker {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: red;
+    margin-top: 10px;
+    z-index: 9999;
+}
+
+.timeline-content {
+    width: 95%;
+    padding: 0 15px;
+    color: blue;
+}
+
+.timeline-content h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.timeline-content span {
+    font-size: 15px;
+    color: blue;
+}
+
+.timeline-content p {
+    font-size: 14px;
+    line-height: 1.5em;
+    word-spacing: 1px;
+    color: black;
+}
+
+/*---------------------------------------------------------------------------------*/
+/*Footer*/
+footer {
+    width: 100%;
+    height: 18vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #555d5e;
+}
+footer div {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
+.imagesFooter {
+    width: 4vw;
+    height: 8vh;
+    margin: 0 50px;
+}
+.imagesFooter:hover {
+    margin: 0 50px;
+    transform: scale(1.3) rotate(340deg) translateX(10px);
+    cursor: pointer;
+}
+/*---------------------------------------------------------------------------------------------------*/
+/*Effet machine à écrire sur le titre*/
+/*.typewriter-text {
+    width: 20%;
+    display: inline-block;
+    overflow: hidden;
+    letter-spacing: 2px;
+    animation: typing 5s steps(30, end) infinite, blink 0.7s step-end infinite;
+    white-space: nowrap;
+    font-size: 1.3rem;
+    border-right: 4px solid white;
+    box-sizing: border-box;
+}
+
+@keyframes typing {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 20%;
+    }
+}
+
+@keyframes blink {
+    from,
+    to {
+        border-color: transparent;
+    }
+    20% {
+        border-color: white;
+    }
+}*/
+
+.big{
+    font-size: 1.5em;
+    margin: 0.2em;
+}
+.animation{
+    display: inline-block;
+    position: relative;
+}
+.animation::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: solid #ccf;
+    box-sizing: border-box;
+    animation: 1s infinite;
+    background-color: white;
+}
+.animation.A::before{
+    animation-name: ping;
+}
+@keyframes ping{
+    0% {border-width: .25em; opacity: 1;}
+    100% {border-width: 0; opacity: 0;}
+}
+/*--------------------------------------------------------------------------------*/
+.star {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: white;
+}
+#title,
+#subtitle,
+#text {
+    color: yellow;
+}
+
+/* Set the font, lean the board, position it */
+#board {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    transform: perspective(300px) rotateX(25deg);
+    transform-origin: 50% 100%;
+    text-align: justify;
+    position: absolute;
+    margin-left: -25%;
+    padding: 0 15px;
+    font-weight: bold;
+    overflow: hidden;
+    font-size: 350%;
+    height: 270%;
+    width: 49%;
+    bottom: 10%;
+    left: 50%;
+}
+
+#board:after {
+    position: absolute;
+    content: " ";
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+/* Set the scrolling animation and position it */
+#content {
+    animation: scroll 30s linear 6s infinite;
+    position: absolute;
+    top: 100%;
+}
+
+#title,
+#subtitle {
+    text-align: center;
+}
+#photoPierre {
+    position: relative;
+    left: 28%;
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+/*--------------------------------------------------------------------------------*/
+/*Galerie des réalisations*/
+h1,
+h2,
+.tag {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 0.25em;
+    line-height: 1em;
+}
+
+h2 {
+    color: #444;
+    transition: 0.3s;
+    margin: 0;
+}
+h4 {
+    font-style: italic;
+    font-size: 0.9em;
+}
+#boiteFlexibleRealisations {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.projContainer {
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    width: 340px;
+    height: 328px;
+    cursor: pointer;
+    margin: 0 0.5em 1em;
+    border: 2px solid #fff;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+}
+
+.projContainer img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: 0.3s;
+}
+
+.projInfoContainer {
+    position: relative;
+    padding: 1em 0em 0em;
+    background: rgba(245, 245, 245, 0.95);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transition: 0.3s;
+    margin-top: 0;
+    text-align: left;
+    border-top: 5px solid #333;
+    font-family: sans-serif;
+}
+/*effet au survol de projInfoContainer----------------*/
+::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    opacity: 0.4;
+    background: red;
+    transition: width 1s;
+}
+.projInfoContainer:hover::before{
+    width: 100%;
+}
+/*------------------------------------------------------*/
+.projCat {
+    color: #57c0de;
+    font-weight: bold;
+    margin-top: 0;
+    font-style: italic;
+}
+.projSpec {
+    color: #333;
+}
+/*--------------------------------------------------------------------------------*/
+/*Compétences*/
+
+.boiteFlexibleSecondaire{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 12vh;
+}
+.boiteFlexible1{
+    width: 400px;
+    height: 380px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    margin-bottom: 10vh;
+}
+.boiteFlexible2{
+    width: 400px;
+    height: 380px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    margin-bottom: 10vh;
+}
+.boiteFlexible3{
+    width: 400px;
+    height: 380px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    margin-bottom: 10vh;
+}
+.boiteFlexible4{
+    width: 400px;
+    height: 380px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    margin-bottom: 10vh;
+}
+.element1{
+    width: 400px;
+    height: 100px;
+    margin-bottom: 2px;
+}
+.element2{
+    width: 400px;
+    height: 250px;
+    background-color: white;
+}
+.element2 p{
+    font-weight: bold;
+    font-size: 1.4em;
+    color: grey;
+    text-align: center;
+    margin-top: 8px;
+}
+.element3{
+    width: 400px;
+    height: 4px;
+    background-color: black;
+    margin-top: 1px;
+}
+#enteteFrontEnd{
+    background-color: yellow;
+}
+#enteteBackEnd{
+    background-color: #00bfff;
+}
+#enteteTransverses{
+    background-color: #32cd32;
+}
+#enteteRelationnelles{
+    background-color: orange;
+}
+#traitFrontEnd{
+    background-color: yellow;
+}
+#traitBackEnd{
+    background-color: #00bfff;
+}
+#traitTransverses{
+    background-color: #32cd32;
+}
+#traitRelationnelles{
+    background-color: orange;
+}
+.element1 img {
+    width: 70px;
+    height: 70px;
+    margin-top: 16px;
+    margin-left: 170px;
+}
+#animationFE:hover{
+    cursor: pointer;
+    transition: 0.8s ease-out;
+    transform: rotateZ(720deg);
+}
+#animationBE:hover{
+    cursor: pointer;
+    transition: 2s ease-out;
+    transform: rotateZ(720deg);
+}
+#animationTransverses:hover {
+    cursor: pointer;
+    animation: plus 01s linear infinite;
+}
+@keyframes plus {
+    from {
+        transform: scale(0.2);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+#animationRelationnelles:hover {
+    cursor: pointer;
+    animation: bounce 0.2s ease infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-22px);
+    }
+}
+.compFE img{
+    width: 70px;
+    height: 70px;
+}
+.compBE img{
+    width: 70px;
+    height: 70px;
+}
+.compT img{
+    width: 70px;
+    height: 70px;
+}
+
+.compFE {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20%;
+}
+.compBE {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15%;
+}
+.compT {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20%;
+}
+.compR {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20%;
+    font-size: 0.7em;
+}
+
+/*------------------------------------------------*/
+/*Compétences : tableau de maîtrise des langages informatiques*/
+.comp {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.comp p {
+    flex: 0 0 5%;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.conteneur-barre {
+    flex: 0 0 50%;
+    background-color: white;
+    font-size: 23px;
+}
+.barre {
+    display: block;
+    height: 100%;
+    text-align: right;
+    color: white;
+    font-weight: bold;
+
+}
+.HTML {
+    width: 50%;
+    background-color: rgb(96, 96, 212);
+}
+.HTML:hover{
+    background-color: red;
+     
+}
+.CSS {
+    width: 60%;
+    background-color: rgb(96, 96, 212);
+}
+.CSS:hover{
+    background-color: red;
+     
+}
+.JS {
+    width: 30%;
+    background-color: rgb(96, 96, 212);
+}
+.JS:hover{
+    background-color: red;
+     
+}
+.php {
+    width: 5%;
+    background-color: rgb(96, 96, 212);
+}
+.php:hover{
+    background-color: red;
+     
+}
+.MySQL {
+    width: 5%;
+    background-color: rgb(96, 96, 212);
+}
+.MySQL:hover{
+    background-color: red;
+     
+}
+.VBA {
+    width: 75%;
+    background-color: rgb(96, 96, 212);
+}
+.VBA:hover{
+    background-color: red;
+     
+}
+
+/*.trianglehaut{
+    border-color: transparent transparent red;
+    border-style: solid;
+    border-width: 0 170px 90px;
+    cursor: pointer;
+}*/
+/*-----------------------------------------------------------------------------------*/
+/*Section Diplomes*/
+#boiteFlexibleDiplomes {
+    width: 95%;
+    height: 65%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.un {
+    width: 34%;
+    height: 20%;
+    text-align: center;
+    background-color: grey;
+    padding-top: 10px;
+    font-weight: bold;
+    color: blue;
+    font-size: 1.3em;
+}
+.deux {
+    width: 34%;
+    height: 40%;
+    text-align: center;
+    background-color: grey;
+    padding-top: 10px;
+    font-weight: bold;
+    color: blue;
+    font-size: 1.3em;
+}
+.trois {
+    width: 34%;
+    height: 60%;
+    text-align: center;
+    background-color: grey;
+    padding-top: 10px;
+    font-weight: bold;
+    color: blue;
+    font-size: 1.3em;
+}
+/*#licence {
+    position: relative;
+    top: 285px;
+    left: -400px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-size: 1.1em;
+}
+#master {
+    position: relative;
+    top: 165px;
+    left: 0px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-size: 1.2em;
+}
+#titrePro {
+    width: 300px;
+    font-weight: bold;
+    position: relative;
+    top: 25px;
+    left: 400px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-size: 1.1em;
+}*/
+/*---------------------------------------------------------------------------------*/
+/*Centres d'intérêts*/
+.centreInteret {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4%;
+}
+.interet {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.interet img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #555;
+}
+figcaption {
+    width: 400px;
+    font-size: 1.5em;
+    margin-top: 10px;
+    text-align: center;
+}
+/*.centreInteret figure:nth-child(1):hover {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4%;
+}*/
+/*-----------------------------------------------------------------------------------*/
+/*Contact*/
+
+.boiteFlexibleSecondaireContact{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5vh;
+}
+.boiteFlexible1Contact{
+    width: 400px;
+    height: 380px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+   
+}
+.boiteFlexible2Contact{
+    width: 400px;
+    height: 380px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    
+}
+.boiteFlexible3Contact{
+    width: 400px;
+    height: 380px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+   
+}
+.element1Contact{
+    width: 400px;
+    height: 85px;
+    margin-bottom: 7px;
+}
+.element2Contact{
+    width: 400px;
+    height: 150px;
+    background-color: white;
+}
+.element2Contact p{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 13%;
+}
+.element3Contact{
+    width: 400px;
+    height: 4px;
+    margin-top: 5px;
+}
+#enteteTelephone{
+    background-color: orange;
+}
+#enteteMail{
+    background-color: #00bfff;
+}
+#enteteAdresse{
+    background-color: #32cd32;
+}
+#traitTelephone{
+    background-color: orange;
+}
+#traitMail{
+    background-color: #00bfff;
+}
+#traitAdresse{
+    background-color: #32cd32;
+}
+.element1Contact img {
+    width: 70px;
+    height: 70px;
+    margin-top: 6px;
+    margin-left: 170px;
+}
+#animationTelephone:hover{
+    cursor: pointer;
+    transition: 0.8s ease-out;
+    transform: rotateZ(720deg);
+}
+#animationMail:hover{
+    cursor: pointer;
+    transition: 2s ease-out;
+    transform: rotateZ(720deg);
+}
+#animationAdresse:hover {
+    cursor: pointer;
+    animation: plus 01s linear infinite;
+}
+@keyframes plus {
+    from {
+        transform: scale(0.2);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+
+.CV{
+    width: 200px;
+    height: 300px;
+}
+#CV{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#CV p{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 1vh;
+}
+.formulaireContact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+
+
+
+
+/*.formulaireContact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 70px;
+}
+#plume {
+    width: 50%;
+    height: 50%;
+}
+.formulaireContact p {
+    margin-top: 7vh;
+    margin-left: -2.8vw;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+.BFC3 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.frameCV {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.frameCV p {
+    margin-top: 5%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.CV {
+    width: 200px;
+    height: 300px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERIES---------------------------------------------------------------------------------------*/
+/*@media screen and (min-width: 1590px) and (max-width: 1850px) {
+    #photoPierre {
+        position: relative;
+        left: 24%;
+    }
+}
+    /*Effet machine à cérire sur le titre*/
+    /*.typewriter-text {
+        width: 23%;
+        display: inline-block;
+        overflow: hidden;
+        letter-spacing: 2px;
+        animation: typing 5s steps(30, end) infinite,
+            blink 0.7s step-end infinite;
+        white-space: nowrap;
+        font-size: 1.3rem;
+        border-right: 4px solid white;
+        box-sizing: border-box;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0%;
+        }
+        to {
+            width: 23%;
+        }
+    }
+
+    @keyframes blink {
+        from,
+        to {
+            border-color: transparent;
+        }
+        23% {
+            border-color: white;
+        }
+    }
+
+    /*Défilement texte Star Wars*/
+    /*.star {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        background-color: white;
+    }
+    #title,
+    #subtitle,
+    #text {
+        color: yellow;
+    }
+
+    /* Set the font, lean the board, position it */
+    /*#board {
+        font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+        transform: perspective(300px) rotateX(25deg);
+        transform-origin: 50% 100%;
+        text-align: justify;
+        position: absolute;
+        margin-left: -25%;
+        padding: 0 15px;
+        font-weight: bold;
+        overflow: hidden;
+        font-size: 250%;
+        height: 270%;
+        width: 49%;
+        bottom: 5%;
+        left: 50%;
+    }
+
+    #board:after {
+        position: absolute;
+        content: " ";
+        bottom: 60%;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    /* Set the scrolling animation and position it */
+    /*#content {
+        animation: scroll 30s linear 6s infinite;
+        position: absolute;
+        top: 100%;
+    }
+
+    #title,
+    #subtitle {
+        text-align: center;
+    }
+    #photoPierre {
+        position: relative;
+        left: 23%;
+    }
+
+    @keyframes scroll {
+        0% {
+            top: 100%;
+        }
+        100% {
+            top: 0%;
+        }
+    }
+    section article:nth-child(2) {
+        height: 130vh;
+    }
+    section article:nth-child(4) {
+        background-color: #c4c4c4;
+        width: 100%;
+        height: 150vh;
+    }
+    /*-----------------------------------------------------------------------------------*/
+
+    /*section article:nth-child(6) {
+        height: 70vh;
+    }
+    section article:nth-child(7) {
+        height: 110vh;
+    }*/
+
+
+/*MEDIA QUERIES---------------------------------------------------------------------------------------*/
+@media screen and (min-width: 1260px) and (max-width: 1589px) {
+   
+   
+
+    /* Set the font, lean the board, position it */
+    #board {
+        font-size: 300%;
+        width: 55%;
+        left: 47%;
+    }
+
+    #photoPierre {
+        position: relative;
+        left: 18%;
+    }
+    /*-------------------------------------------------------------------*/
+    /*Compétences*/
+    #boiteFlexibleCompetence {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin-top: 70px;
+    }
+    .comp p {
+        flex: 0 0 10%;
+        font-weight: bold;
+        font-size: 1.4em;
+    }
+    /*----------------------------------------------------------*/
+    /*Section Compétences*/
+    section article:nth-child(2) {
+        height: 180vh;
+    }
+    /*----------------------------------------------------------*/
+    section article:nth-child(4) {
+        background-color: #c4c4c4;
+        width: 100%;
+        height: 180vh;
+    }
+   
+  
+    
+    /*---------------------------------------------------------------------------------*/
+    /*Centres d'intérêts*/
+    .interet img {
+        width: 160px;
+        height: 160px;
+    }
+    figcaption {
+        width: 300px;
+        font-size: 1.2em;
+    }
+
+    section article:nth-child(6) {
+        height: 70vh;
+    }
+
+    /*-------------------------------------------------------------------------------*/
+    /*Taille image dans le */
+    .imagesFooter {
+        width: 6vw;
+        height: 10vh;
+        margin: 5px 50px;
+    }
+}
+/*MEDIA QUERIES---------------------------------------------------------------------------------------*/
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    
+    /*--------------------------------------------------------------------------------*/
+.star {
+    display: none;
+}
+
+
+/* Set the font, lean the board, position it */
+#board {
+   display:none;
+}
+section article:nth-child(2) {
+    background-color: #c4c4c4;
+    width: 100%;
+    height: 200vh;
+}
+section article:nth-child(3) {
+    background-color: #d3d3d3;
+    width: 100%;
+    height: 80vh;
+}
+section article:nth-child(4) {
+    background-color: #c4c4c4;
+    width: 100%;
+    height: 230vh;
+}    
+section article:nth-child(5) {
+    background-color: #d3d3d3;
+    width: 100%;
+    height: 90vh;
+}
+.un {
+    font-size: 1.1em;
+}
+.deux {
+    font-size: 1.1em;
+}
+.trois {
+    font-size: 1.1em;
+}
+section article:nth-child(6) {
+    background-color: #c4c4c4;
+    width: 100%;
+    height: 120vh;
+}
+/*Centres d'intérêts*/
+.centreInteret {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4%;
+}
+.interet {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.interet img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #555;
+}
+figcaption {
+    width: 400px;
+    font-size: 1.5em;
+    margin-top: 10px;
+    text-align: center;
+}
+section article:nth-child(7) {
+    background-color: #d3d3d3;
+    width: 100%;
+    height: 140vh;
+}
+
+}
+/*MEDIA QUERIES---------------------------------------------------------------------------------------*/
+/*@media screen and (min-width: 790px) and (max-width: 999px) {    
+    /*Effet machine à écrire sur le titre*/
+    /*.typewriter-text {
+        width: 35%;
+        animation: typing 0s steps(30, end) infinite;
+    }
+
+    /*Effet de défilement du texte Star Wars*/
+    /*.star {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        background-color: white;
+    }
+    #text {
+        color: yellow;
+        display: flex;
+    }
+    /* Set the scrolling animation and position it */
+    /*#content {
+        animation: scroll 0s linear 6s infinite;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #title,
+    #subtitle {
+        display: none;
+    }
+    #photoPierre {
+        position: relative;
+        left: 28%;
+    }
+    /*-------------------------------------------------------------------*/
+    /*Compétences*/
+    /*#boiteFlexibleCompetence {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin-top: 70px;
+    }
+    .comp p {
+        flex: 0 0 10%;
+        font-weight: bold;
+    }
+    /*----------------------------------------------------------*/
+    /*Section Compétences*/
+    /*section article:nth-child(2) {
+        height: 400vh;
+    }
+    /*----------------------------------------------------------*/
+    /*Section Réalisations*/
+    /*section article:nth-child(3) {
+        background-color: #d3d3d3;
+        width: 100%;
+        height: 120vh;
+    }
+    #boiteFlexibleRealisations {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    /*----------------------------------------------------------*/
+    /*section article:nth-child(4) {
+        background-color: #c4c4c4;
+        width: 100%;
+        height: 420vh;
+    }
+    /*----------------------------------------------------------*/
+    /*Section Diplomes*/
+    /*section article:nth-child(5) {
+        background-color: #d3d3d3;
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #boiteFlexibleDiplomes {
+        margin-bottom: 10%;
+    }
+    .un {
+        width: 44%;
+        height: 25%;
+        font-size: 0.8em;
+    }
+    .deux {
+        width: 44%;
+        height: 50%;
+        font-size: 0.8em;
+    }
+    .trois {
+        width: 44%;
+        height: 75%;
+        font-size: 0.8em;
+    }
+    #licence {
+        width: 130px;
+        top: 350px;
+        left: -150px;
+        font-size: 0.7em;
+    }
+    #master {
+        top: 238px;
+        left: 0px;
+        font-size: 0.7em;
+    }
+    #titrePro {
+        width: 150px;
+        top: 105px;
+        left: 149px;
+        font-size: 0.7em;
+    }
+    /*---------------------------------------------------------------------------------*/
+    /*Centres d'intérêts*/
+/*.centreInteret {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 6%;
+        margin-left: 0%;
+    }
+    .interet img {
+        width: 180px;
+        height: 180px;
+    }
+    figcaption {
+        width: 300px;
+        font-size: 1.2em;
+    }
+
+    section article:nth-child(6) {
+        height: 130vh;
+    }
+    /*---------------------------------------------------------------------------*/
+    /*Contact*/
+    /*section article:nth-child(7) {
+        height: 250vh;
+    }
+    #boiteFlexibleContact {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin-top: 70px;
+    }
+    #boiteFlexibleContact2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    /*-------------------------------------------------------------------------------*/
+    /*footer {
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #555d5e;
+    }
+    /*Taille image dans le */
+    /*.imagesFooter {
+        width: 9vw;
+        height: 14vh;
+        margin: 5px 50px;
+    }
+}
+/*MEDIA QUERIES---------------------------------------------------------------------------------------*/
+@media screen and (min-width: 660px) and (max-width: 789px) {
+    /*Effet machine à écrire sur le titre*/
+    .typewriter-text {
+        width: 35%;
+        animation: typing 0s steps(30, end) infinite;
+    }
+
+    /*Effet de défilement du texte Star Wars*/
+    .star {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        background-color: white;
+    }
+    #text {
+        color: yellow;
+        display: flex;
+    }
+    /* Set the scrolling animation and position it */
+    #content {
+        animation: scroll 0s linear 6s infinite;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #title,
+    #subtitle {
+        display: none;
+    }
+    #photoPierre {
+        position: relative;
+        left: 28%;
+    }
+    /*-------------------------------------------------------------------*/
+    /*Compétences*/
+    #boiteFlexibleCompetence {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin-top: 70px;
+    }
+    .comp p {
+        flex: 0 0 15%;
+        font-weight: bold;
+    }
+    .conteneur-barre {
+        flex: 0 0 60%;
+        background-color: white;
+    }
+    /*----------------------------------------------------------*/
+    /*Section Compétences*/
+    section article:nth-child(2) {
+        height: 670vh;
+    }
+    /*----------------------------------------------------------*/
+    /*Section Réalisations*/
+    section article:nth-child(3) {
+        background-color: #d3d3d3;
+        width: 100%;
+        height: 360vh;
+    }
+    #boiteFlexibleRealisations {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    /*----------------------------------------------------------*/
+    section article:nth-child(4) {
+        background-color: #c4c4c4;
+        width: 100%;
+        height: 790vh;
+    }
+    /*----------------------------------------------------------*/
+    /*Section Diplomes*/
+    section article:nth-child(5) {
+        background-color: #d3d3d3;
+        width: 100%;
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #boiteFlexibleDiplomes {
+        margin: auto;
+    }
+    .un {
+        width: 54%;
+        height: 25%;
+        font-size: 0.8em;
+    }
+    .deux {
+        width: 54%;
+        height: 50%;
+        font-size: 0.8em;
+    }
+    .trois {
+        width: 54%;
+        height: 75%;
+        font-size: 0.8em;
+    }
+    #licence {
+        width: 130px;
+        top: 220px;
+        left: -140px;
+        font-size: 0.7em;
+    }
+    #master {
+        top: 108px;
+        left: 0px;
+        font-size: 0.7em;
+    }
+    #titrePro {
+        width: 130px;
+        top: -30px;
+        left: 137px;
+        font-size: 0.7em;
+    }
+    /*---------------------------------------------------------------------------------*/
+    /*Centres d'intérêts*/
+    .centreInteret {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 6%;
+        margin-left: 0%;
+    }
+    .interet img {
+        width: 180px;
+        height: 180px;
+    }
+    figcaption {
+        width: 300px;
+        font-size: 1.2em;
+    }
+
+    section article:nth-child(6) {
+        height: 170vh;
+    }
+    /*---------------------------------------------------------------------------*/
+    /*Contact*/
+    section article:nth-child(7) {
+        height: 380vh;
+    }
+    #boiteFlexibleContact {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin-top: 70px;
+    }
+    #boiteFlexibleContact2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    /*-------------------------------------------------------------------------------*/
+    footer {
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #555d5e;
+    }
+    /*Taille image dans le */
+    .imagesFooter {
+        width: 12vw;
+        height: 18vh;
+        margin: 5px 50px;
+    }
+}
+/*-----------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 570px) and (max-width: 789px) {
+        /*Menu déroulant*/
+        #sidebar {
+            position: fixed;
+            width: 250px;
+            height: 100vh;
+            background:grey;
+            left: -250px;
+            transition: all 400ms linear;
+            z-index: 10000;
+        }
+        #sidebar.active {
+            left: 0px;
+        }
+        #sidebar ul li {
+            color: white;
+            padding: 11px 10px;
+            border-bottom: 1px solid white;
+            text-align: left;
+        }
+        #sidebar ul li a {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: white;
+        }
+        #sidebar .toggle-btn {
+            position: absolute;
+            left: 280px;
+            top: 20px;
+        }
+        #sidebar .toggle-btn span {
+            display: block;
+            width: 35px;
+            height: 5px;
+            background: white;
+            margin: 6px 0px;
+            border-radius: 15px;
+        }
+        /*Script pour transformer l'icône du menu de navigation en croix---------------------------------------------*/
+        .toggle-btn {
+            display: inline-block;
+            cursor: pointer;
+            position: fixed;
+        }
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 35px;
+            height: 5px;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+        .change .bar2 {
+            opacity: 0;
+        }
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+    /*Effet machine à écrire sur le titre*/
+    .typewriter-text {
+        width: 35%;
+        animation: typing 0s steps(30, end) infinite;
+    }
+
+    /*Effet de défilement du texte Star Wars*/
+    .star {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        background-color: white;
+    }
+    #text {
+        color: yellow;
+        display: flex;
+    }
+    /* Set the scrolling animation and position it */
+    #content {
+        animation: scroll 0s linear 6s infinite;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #title,
+    #subtitle {
+        display: none;
+    }
+    #photoPierre {
+        position: relative;
+        left: 28%;
+    }
+    /*-------------------------------------------------------------------*/
+    /*Compétences*/
+    #boiteFlexibleCompetence {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin-top: 70px;
+    }
+    .comp p {
+        flex: 0 0 15%;
+        font-weight: bold;
+    }
+    .conteneur-barre {
+        flex: 0 0 60%;
+        background-color: white;
+    }
+    /*----------------------------------------------------------*/
+    /*Section Compétences*/
+    section article:nth-child(2) {
+        height: 580vh;
+    }
+    /*----------------------------------------------------------*/
+    /*Section Réalisations*/
+    section article:nth-child(3) {
+        background-color: #d3d3d3;
+        width: 100%;
+        height: 300vh;
+    }
+    #boiteFlexibleRealisations {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    /*----------------------------------------------------------*/
+    section article:nth-child(4) {
+        background-color: #c4c4c4;
+        width: 100%;
+        height: 800vh;
+    }
+    /*----------------------------------------------------------*/
+    /*Section Diplomes*/
+    section article:nth-child(5) {
+        background-color: #d3d3d3;
+        width: 100%;
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #boiteFlexibleDiplomes {
+        margin: auto;
+    }
+    .un {
+        width: 54%;
+        height: 25%;
+        font-size: 0.8em;
+    }
+    .deux {
+        width: 54%;
+        height: 50%;
+        font-size: 0.8em;
+    }
+    .trois {
+        width: 54%;
+        height: 75%;
+        font-size: 0.8em;
+    }
+    #licence {
+        width: 130px;
+        top: 220px;
+        left: -140px;
+        font-size: 0.7em;
+    }
+    #master {
+        top: 108px;
+        left: 0px;
+        font-size: 0.7em;
+    }
+    #titrePro {
+        width: 130px;
+        top: -30px;
+        left: 137px;
+        font-size: 0.7em;
+    }
+    /*---------------------------------------------------------------------------------*/
+    /*Centres d'intérêts*/
+    .centreInteret {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 6%;
+        margin-left: 0%;
+    }
+    .interet img {
+        width: 180px;
+        height: 180px;
+    }
+    figcaption {
+        width: 300px;
+        font-size: 1.2em;
+    }
+
+    section article:nth-child(6) {
+        height: 190vh;
+    }
+    /*---------------------------------------------------------------------------*/
+    /*Contact*/
+    section article:nth-child(7) {
+        height: 380vh;
+    }
+    #boiteFlexibleContact {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin-top: 70px;
+    }
+    #boiteFlexibleContact2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    /*-------------------------------------------------------------------------------*/
+    footer {
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #555d5e;
+    }
+    /*Taille image dans le */
+    .imagesFooter {
+        width: 12vw;
+        height: 18vh;
+        margin: 5px 50px;
+    }
+}
+/*-----------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 470px) and (max-width: 569px) {
+    /*Effet machine à écrire sur le titre*/
+    .typewriter-text {
+        width: 35%;
+        animation: typing 0s steps(30, end) infinite;
+    }
+
+    /*Effet de défilement du texte Star Wars*/
+    .star {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        background-color: white;
+    }
+    #text {
+        color: yellow;
+        display: flex;
+    }
+    /* Set the scrolling animation and position it */
+    #content {
+        animation: scroll 0s linear 6s infinite;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #title,
+    #subtitle {
+        display: none;
+    }
+    #photoPierre {
+        position: relative;
+        left: 28%;
+    }
+    /*-------------------------------------------------------------------*/
+    /*Compétences*/
+    #boiteFlexibleCompetence {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin-top: 70px;
+    }
+    .comp p {
+        flex: 0 0 15%;
+        font-weight: bold;
+    }
+    .conteneur-barre {
+        flex: 0 0 60%;
+        background-color: white;
+    }
+    /*----------------------------------------------------------*/
+    /*Section Compétences*/
+    section article:nth-child(2) {
+        height: 670vh;
+    }
+    /*----------------------------------------------------------*/
+    /*Section Réalisations*/
+    section article:nth-child(3) {
+        background-color: #d3d3d3;
+        width: 100%;
+        height: 360vh;
+    }
+    #boiteFlexibleRealisations {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    /*----------------------------------------------------------*/
+    section article:nth-child(4) {
+        background-color: #c4c4c4;
+        width: 100%;
+        height: 790vh;
+    }
+    /*----------------------------------------------------------*/
+    /*Section Diplomes*/
+    section article:nth-child(5) {
+        background-color: #d3d3d3;
+        width: 100%;
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #boiteFlexibleDiplomes {
+        margin: auto;
+    }
+    .un {
+        width: 54%;
+        height: 25%;
+        font-size: 0.8em;
+    }
+    .deux {
+        width: 54%;
+        height: 50%;
+        font-size: 0.8em;
+    }
+    .trois {
+        width: 54%;
+        height: 75%;
+        font-size: 0.8em;
+    }
+    #licence {
+        width: 130px;
+        top: 220px;
+        left: -140px;
+        font-size: 0.7em;
+    }
+    #master {
+        top: 108px;
+        left: 0px;
+        font-size: 0.7em;
+    }
+    #titrePro {
+        width: 130px;
+        top: -30px;
+        left: 137px;
+        font-size: 0.7em;
+    }
+    /*---------------------------------------------------------------------------------*/
+    /*Centres d'intérêts*/
+    .centreInteret {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 6%;
+        margin-left: 0%;
+    }
+    .interet img {
+        width: 180px;
+        height: 180px;
+    }
+    figcaption {
+        width: 300px;
+        font-size: 1.2em;
+    }
+
+    section article:nth-child(6) {
+        height: 170vh;
+    }
+    /*---------------------------------------------------------------------------*/
+    /*Contact*/
+    section article:nth-child(7) {
+        height: 380vh;
+    }
+    #boiteFlexibleContact {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin-top: 70px;
+    }
+    #boiteFlexibleContact2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    /*-------------------------------------------------------------------------------*/
+    footer {
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #555d5e;
+    }
+    /*Taille image dans le */
+    .imagesFooter {
+        width: 12vw;
+        height: 18vh;
+        margin: 5px 50px;
+    }
+}
+/*-----------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 375px) and (max-width: 479px) {
+    h1{
+        font-size: 36px;
+    }
+    hr {
+        width: 95%;
+        height: 0.1vh;
+        background-color: white;
+    }
+    /*Modification de la taille du titre*/
+    .name {
+        font-size: 1.7em;
+        text-align: center;
+        font-style: bold;
+    }
+    /*modification de la taille de l'intitulé du poste*/
+    .big{
+        font-size: 1.3em;
+        margin: 0.2em;
+        text-align: center;
+    }
+    .star{
+        display: none;
+    }
+    #content{
+    display: none;
+    }
+    /*Menu Déroulant (Sidebar) : changement de position du bouton de menu déroulant-------------------------------------------------------------------*/
+
+#sidebar .toggle-btn {
+    position: absolute;
+    left: 280px;
+    top: 5px;
+}
+
+    /*-------------------------------------------------------------------*/
+    /*Compétences*/
+    #boiteFlexibleCompetence {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin-top: 70px;
+    }
+    .competence {
+        margin-top: 5%;
+        width: 350px;
+        height: 250px;
+        margin-left: 20px;
+        background-color: white;
+    }
+    #gauche {
+        width: 46%;
+        height: 66%;
+        position: relative;
+        top: 42px;
+        left: -90px;
+        background-color: white;
+    }
+
+    #droite {
+        width: 42.5%;
+        height: 66%;
+        position: relative;
+        bottom: 88px;
+        left: 185px;
+        background-color: white;
+    }
+    .comp p {
+        flex: 0 0 22%;
+        font-weight: bold;
+    }
+    .conteneur-barre {
+        flex: 0 0 65%;
+        background-color: white;
+    }
+    #traitCompetences1 {
+        background-color: yellow;
+        width: 94%;
+        height: 4px;
+        margin-top: 5px;
+    }
+    #traitCompetences2 {
+        background-color: #00bfff;
+        width: 94%;
+        height: 4px;
+        margin-top: 5px;
+    }
+    #traitCompetences3 {
+        background-color: #32cd32;
+        width: 95%;
+        height: 4px;
+        margin-top: 5px;
+    }
+    #traitCompetences4 {
+        background-color: orange;
+        width: 95%;
+        height: 4px;
+        margin-top: 5px;
+    }
+    /*----------------------------------------------------------*/
+    /*Section Compétences*/
+    section article:nth-child(2) {
+        height: 350vh;
+    }
+    /*----------------------------------------------------------*/
+    /*Section Réalisations*/
+    section article:nth-child(3) {
+        background-color: #d3d3d3;
+        width: 100%;
+        height: 200%;
+    }
+    #boiteFlexibleRealisations {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    /*----------------------------------------------------------*/
+    /*Experience*/
+    /*changement taille des ronds de la frise*/
+    .marker {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 2px solid white;
+        background: red;
+        margin-top: 10px;
+        z-index: 9999;
+    }
+    /*------------------------------------------------------------*/
+    section article:nth-child(4) {
+        background-color: #c4c4c4;
+        width: 100%;
+        height: 200%;
+    }
+    .timeline-content p {
+        display: none;
+    }
+    /*----------------------------------------------------------*/
+    /*Centres d'intérêts*/
+    .centreInteret {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 6%;
+        margin-left: 0%;
+    }
+    .interet img {
+        width: 140px;
+        height: 140px;
+        margin-top: 50px;
+    }
+    figcaption {
+        width: 300px;
+        font-size: 1.2em;
+    }
+
+    section article:nth-child(6) {
+        height: 170vh;
+    }
+    /*---------------------------------------------------------------------------*/
+    /*Contact*/
+    section article:nth-child(7) {
+        height: 380vh;
+    }
+    #boiteFlexibleContact {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin-top: 70px;
+    }
+    #boiteFlexibleContact2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    /*-------------------------------------------------------------------------------*/
+    #plume {
+        display: none;
+    }
+    .formulaireContact p {
+        margin-top: 6.2vh;
+        margin-bottom: 10vh;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+    }
+    .BFC3 {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+  
+/*---------------------------------------------------------------------------------------------*/
+    
+    
+    footer {
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #555d5e;
+    }
+    /*Taille image dans le */
+    .imagesFooter {
+        width: 12vw;
+        height: 15vh;
+        margin: 3px 20px;
+    }
+    footer p{
+        text-align: center;
+    }
+}
