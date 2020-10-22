@@ -9,43 +9,73 @@
         href="https://fonts.googleapis.com/css?family=Roboto&display=swap"="stylesheet"/>
     </head>
     <body>
+
+        <div id="sidebar">
+            <div
+                class="toggle-btn"
+                onclick="myFunction(this); toggleSidebar();"
+            >
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
+            <ul>
+                <li><a href="index.html#name">ACCUEIL</a></li>
+
+                <li><a href="index.html#TitreAPropos">A PROPOS</a></li>
+
+                <li><a href="index.html#TitreCompetences">COMPETENCES</a></li>
+
+                <li><a href="index.html#Realisations">REALISATIONS</a></li>
+
+                <li><a href="index.html#experiences">EXPERIENCES</a></li>
+
+                <li><a href="index.html#diplomes">DIPLOMES</a></li>
+
+                <li><a href="index.html#hobbies">HOBBIES</a></li>
+
+                <li><a href="index.html#contact">CONTACT</a></li>
+            </ul>
+        </div>
         <main>
             <header>
                 <img src="dossierimage/quill-drawing-a-line.svg" alt="plume" />
                 <p>FORMULAIRE DE CONTACT</p>
             </header>
-            <nav>
-                <ul>
-                    <li>ACCUEIL</li>
-                    <li>A PROPOS</li>
-                    <li>COMPETENCES</li>
-                    <li>REALISATIONS</li>
-                    <li>EXPERIENCE</li>
-                    <li>DIPLOMES</li>
-                    <li>HOBBIES</li>
-                    <li>CONTACT</li>
-                </ul>
-            </nav>
+            
             <section>
                 <article id="para1">
                     <p id="titre">CONTACTEZ-MOI</p>
-                    <p>Pierre THOMAIN - Développeur Web Junior<br>
+                    <p id="coordonnees">Pierre THOMAIN - Développeur Web Junior<br>
                     10 Bis Avenue d'Aspe, 64400 BIDOS<br>
                     Tél : 06 73 87 65 46</p>
-                    <p id="consulterCV">Consulter mon CV</p>
+                    <!-- <p id="consulterCV">Consulter mon CV</p> -->
                 </article>
                 <article>
-                    <img id="facebook" src="dossierimage/icons8-facebook.svg" alt="facebook" />
-                    <img id="linkedIn" src="dossierimage/icons8-linkedin.svg" alt="linkedIn" />
-                    <img id="github" src="dossierimage/icons8-github.svg" alt="GitHub" />
+                    <!-- <a href=""><img id="facebook" src="dossierimage/icons8-facebook.svg" alt="facebook"/></a> -->
+                    <a href=""><img id="linkedIn" src="dossierimage/icons8-linkedin.svg" alt="linkedIn"/></a>
+                    <a href=""><img id="github" src="dossierimage/icons8-github.svg" alt="GitHub"/></a>
                 </article>
                 <form method="post" action="#.php" >
                     <input class="formulaire" id="nom" name="nom" type="text" placeholder="Nom"/>
-                    <input class="formulaire" id="mail" name="e-mail" type="text" placeholder="e-mail" />
+                    <input class="formulaire" id="mail" name="e-mail" type="text" placeholder="Email" />
                     <textarea class="formulaire" id="message" rows="6" cols="100" placeholder="Message"></textarea>
                     <button class="formulaire" id="bouton">ENVOYER</button>
                 </form>
             </section>
         </main>
+        <script src="dossierjs/javascript.js"></script>
+        <script src= "https://unpkg.com/scrollreveal"></script>
+        <script src="dossierjs/app.js"></script>
+        <script>
+            /*Animation apparition de la sidebar------------------------------------------------------------------------*/
+            function toggleSidebar() {
+                document.getElementById("sidebar").classList.toggle("active");
+            }
+            /*Animation transformation de l'icône menu en barre après le clic-----------------------------------------------*/
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
     </body>
 </html>

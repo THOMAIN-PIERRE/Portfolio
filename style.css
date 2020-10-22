@@ -6,17 +6,34 @@ main {
     padding: 0;
     margin: 0;
     font-family: "Roboto", sans-serif;
+    background-color: #222222;
 }
 
 * {
     margin: 0;
     padding: 0;
 }
+#name{
+    font-size: 2.8rem;
+    font-style: bold;
+}
+.poste{
+    color: lightgrey;
+}
+h1{
+    border: 3px solid white;
+}
 h1,
 h4 {
     text-align: center;
-    padding-top: 20px;
+    /* margin-top: 3px; */
+    padding: 12px;
+    color: white;
 }
+/* .main-header{
+    position: sticky; 
+    top: 0;
+} */
 header {
     display: flex;
     flex-flow: column wrap;
@@ -24,45 +41,27 @@ header {
     align-items: center;
     background-color: black;
     width: 100%;
-    height: 30%;
+    height: 25vh;
     color: white;
-    opacity: 0.8;
+    /* opacity: 0.8; */
+    /* position: fixed;
+    top: 0; */
+   
 }
-.name {
-    font-size: 2em;
-    font-style: bold;
-}
-
 hr {
-    width: 24%;
-    height: 0.1vh;
+    width: 24rem;
+    height: 0.3vh;
+    margin-bottom: 5px;
     background-color: white;
 }
-/*nav,
-ul {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    background-color: rgb(85, 93, 94);
-    color: rgb(187, 181, 181);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-    width: 100%;
-    height: 6vh;
-}
-nav ul li:hover {
-    color: yellow;
-}*/
 
 /*Menu Déroulant (Sidebar)-------------------------------------------------------------------*/
 #sidebar {
     position: fixed;
-    width: 270px;
+    width: 260px;
     height: 100vh;
-    background:grey;
-    left: -270px;
+    background: grey;
+    left: -260px;
     transition: all 400ms linear;
     z-index: 10000;
 }
@@ -75,7 +74,7 @@ nav ul li:hover {
     border-bottom: 1px solid white;
     text-align: left;
 }
-#sidebar li:hover a{
+#sidebar li:hover a {
     color: yellow;
 }
 #sidebar ul li a {
@@ -85,7 +84,7 @@ nav ul li:hover {
 }
 #sidebar .toggle-btn {
     position: absolute;
-    left: 310px;
+    left: 270px;
     top: 20px;
 }
 #sidebar .toggle-btn span {
@@ -121,41 +120,7 @@ nav ul li:hover {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
-section article:nth-child(1) {
-    background-color: black;
-    width: 100%;
-    height: 63vh;
-}
-section article:nth-child(2) {
-    background-color: #c4c4c4;
-    width: 100%;
-    height: 130vh;
-}
-section article:nth-child(3) {
-    background-color: #d3d3d3;
-    width: 100%;
-    height: 70vh;
-}
-section article:nth-child(4) {
-    background-color: #c4c4c4;
-    width: 100%;
-    height: 135vh;
-}
-section article:nth-child(5) {
-    background-color: #d3d3d3;
-    width: 100%;
-    height: 70vh;
-}
-section article:nth-child(6) {
-    background-color: #c4c4c4;
-    width: 100%;
-    height: 60vh;
-}
-section article:nth-child(7) {
-    background-color: #d3d3d3;
-    width: 100%;
-    height: 140vh;
-}
+
 /*---------------------------------------------------------------------------------*/
 /*Timeline*/
 h1 {
@@ -217,7 +182,7 @@ h1 span {
     height: 22px;
     border-radius: 50%;
     border: 2px solid white;
-    background: red;
+    background: blue;
     margin-top: 10px;
     z-index: 9999;
 }
@@ -225,7 +190,7 @@ h1 span {
 .timeline-content {
     width: 95%;
     padding: 0 15px;
-    color: blue;
+    color: yellow;
 }
 
 .timeline-content h3 {
@@ -237,88 +202,70 @@ h1 span {
 
 .timeline-content span {
     font-size: 15px;
-    color: blue;
+    color: yellow;
 }
 
 .timeline-content p {
     font-size: 14px;
     line-height: 1.5em;
     word-spacing: 1px;
-    color: black;
+    color: white;
 }
 
 /*---------------------------------------------------------------------------------*/
-/*Footer*/
-footer {
+
+footer section {
     width: 100%;
-    height: 18vh;
+    height: 20vh;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row wrap;
+    justify-content: center;
     align-items: center;
+    font-style: italic;
     background-color: #555d5e;
 }
 footer div {
     width: 100%;
-    height: 5vh;
+    height: 4vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-style: italic;
-}
-.imagesFooter {
-    width: 4vw;
-    height: 8vh;
-    margin: 0 50px;
+    background-color: #555d5e;
 }
 .imagesFooter:hover {
     margin: 0 50px;
     transform: scale(1.3) rotate(340deg) translateX(10px);
     cursor: pointer;
 }
+footer {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #555d5e;
+}
+
+/*Taille image dans le footer*/
+.imagesFooter {
+    width: 10vw;
+    height: 18vh;
+    margin: 5px 50px;
+}
 /*---------------------------------------------------------------------------------------------------*/
-/*Effet machine à écrire sur le titre*/
-/*.typewriter-text {
-    width: 20%;
-    display: inline-block;
-    overflow: hidden;
-    letter-spacing: 2px;
-    animation: typing 5s steps(30, end) infinite, blink 0.7s step-end infinite;
-    white-space: nowrap;
-    font-size: 1.3rem;
-    border-right: 4px solid white;
-    box-sizing: border-box;
-}
 
-@keyframes typing {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 20%;
-    }
-}
-
-@keyframes blink {
-    from,
-    to {
-        border-color: transparent;
-    }
-    20% {
-        border-color: white;
-    }
-}*/
-
-.big{
+/* .big {
     font-size: 1.5em;
     margin: 0.2em;
 }
-.animation{
+.animation {
     display: inline-block;
     position: relative;
-}
-.animation::before{
+} */
+/* .animation::before {
     content: "";
     position: absolute;
     top: 0;
@@ -329,150 +276,68 @@ footer div {
     box-sizing: border-box;
     animation: 1s infinite;
     background-color: white;
-}
-.animation.A::before{
+} */
+/* .animation.A::before {
     animation-name: ping;
 }
-@keyframes ping{
-    0% {border-width: .25em; opacity: 1;}
-    100% {border-width: 0; opacity: 0;}
-}
-/*--------------------------------------------------------------------------------*/
-.star {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    background-color: white;
-}
-#title,
-#subtitle,
-#text {
-    color: yellow;
-}
-
-/* Set the font, lean the board, position it */
-#board {
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    transform: perspective(300px) rotateX(25deg);
-    transform-origin: 50% 100%;
-    text-align: justify;
-    position: absolute;
-    margin-left: -25%;
-    padding: 0 15px;
-    font-weight: bold;
-    overflow: hidden;
-    font-size: 350%;
-    height: 270%;
-    width: 49%;
-    bottom: 10%;
-    left: 50%;
-}
-
-#board:after {
-    position: absolute;
-    content: " ";
-    bottom: 60%;
-    left: 0;
-    right: 0;
-    top: 0;
-}
-
-/* Set the scrolling animation and position it */
-#content {
-    animation: scroll 30s linear 6s infinite;
-    position: absolute;
-    top: 100%;
-}
-
-#title,
-#subtitle {
-    text-align: center;
-}
-#photoPierre {
-    position: relative;
-    left: 28%;
-}
-
-@keyframes scroll {
+@keyframes ping {
     0% {
-        top: 100%;
+        border-width: 0.25em;
+        opacity: 1;
     }
     100% {
-        top: 0%;
+        border-width: 0;
+        opacity: 0;
     }
-}
+} */
 /*--------------------------------------------------------------------------------*/
-/*Galerie des réalisations*/
-h1,
-h2,
-.tag {
+/* #title,
+#subtitle, */
+#text {
+    color: yellow;
+    width: 50%;
+    display: block;
+    margin: auto;
+    text-align: justify;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     font-weight: bold;
-    text-transform: uppercase;
-    font-family: sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 8vh
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: white;
-    margin-bottom: 0.25em;
-    line-height: 1em;
-}
 
-h2 {
-    color: #444;
-    transition: 0.3s;
-    margin: 0;
-}
-h4 {
-    font-style: italic;
-    font-size: 0.9em;
-}
-#boiteFlexibleRealisations {
+
+.conteneur{
+    /* height: 90vh; */
+    margin-top: 8vh;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 5%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#photoPierre {
+    background: url(dossierimage/Photo_Pierre.png);
+    transition: all .2s ease-in-out;
+    border-radius: 15%;
+    margin: auto;
+    min-width: 15rem;
+    max-height: 20rem;
+    display:block;
+    margin:auto;
+    margin-bottom: 6vh;  
 }
 
-.projContainer {
-    display: inline-block;
-    vertical-align: top;
-    overflow: hidden;
-    position: relative;
-    vertical-align: top;
-    width: 340px;
-    height: 328px;
-    cursor: pointer;
-    margin: 0 0.5em 1em;
-    border: 2px solid #fff;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-}
+#photoPierre:hover {
+    border-radius: 50%;
+    box-shadow: 10px 10px 20px #000 inset;
+    /* background-position: 80% 20%; */
+} 
 
-.projContainer img {
-    max-width: 100%;
-    max-height: 100%;
-    transition: 0.3s;
-}
 
-.projInfoContainer {
-    position: relative;
-    padding: 1em 0em 0em;
-    background: rgba(245, 245, 245, 0.95);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    transition: 0.3s;
-    margin-top: 0;
-    text-align: left;
-    border-top: 5px solid #333;
-    font-family: sans-serif;
-}
+
 /*effet au survol de projInfoContainer----------------*/
-::before{
-    content:"";
+::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -482,127 +347,69 @@ h4 {
     background: red;
     transition: width 1s;
 }
-.projInfoContainer:hover::before{
+.projInfoContainer:hover::before {
     width: 100%;
 }
-/*------------------------------------------------------*/
-.projCat {
-    color: #57c0de;
-    font-weight: bold;
-    margin-top: 0;
-    font-style: italic;
-}
-.projSpec {
-    color: #333;
-}
+
 /*--------------------------------------------------------------------------------*/
 /*Compétences*/
 
-.boiteFlexibleSecondaire{
-    width: 100%;
-    height: 500px;
+
+.competences{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 12vh;
-}
-.boiteFlexible1{
-    width: 400px;
-    height: 380px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
+    margin-top: 10vh;
     margin-bottom: 10vh;
+    
 }
-.boiteFlexible2{
-    width: 400px;
-    height: 380px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    margin-bottom: 10vh;
+.competencesMetier{
+    flex-flow: row wrap;
+    background: rgba(245, 245, 245, 0.95);
+    min-width: 45vw;
+    min-height: 60vh;
+    cursor: pointer;
+    margin: 5vh auto;
 }
-.boiteFlexible3{
-    width: 400px;
-    height: 380px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    margin-bottom: 10vh;
-}
-.boiteFlexible4{
-    width: 400px;
-    height: 380px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    margin-bottom: 10vh;
-}
-.element1{
-    width: 400px;
-    height: 100px;
-    margin-bottom: 2px;
-}
-.element2{
-    width: 400px;
-    height: 250px;
-    background-color: white;
-}
-.element2 p{
-    font-weight: bold;
-    font-size: 1.4em;
+.type{
     color: grey;
+    font-size: 1.8rem;
     text-align: center;
-    margin-top: 8px;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    font-weight: bold;
 }
-.element3{
-    width: 400px;
-    height: 4px;
-    background-color: black;
-    margin-top: 1px;
-}
-#enteteFrontEnd{
-    background-color: yellow;
-}
-#enteteBackEnd{
-    background-color: #00bfff;
-}
-#enteteTransverses{
-    background-color: #32cd32;
-}
-#enteteRelationnelles{
+#enteteFE {
     background-color: orange;
+    height: 12vh;
 }
-#traitFrontEnd{
-    background-color: yellow;
-}
-#traitBackEnd{
+#enteteBE {
     background-color: #00bfff;
+    height: 12vh;
 }
-#traitTransverses{
+#enteteT {
     background-color: #32cd32;
+    height: 12vh;
 }
-#traitRelationnelles{
-    background-color: orange;
+#compAnimation{
+    width: 80px;
+    height: 90px;
+    display: block;
+    margin: auto;
 }
-.element1 img {
-    width: 70px;
-    height: 70px;
-    margin-top: 16px;
-    margin-left: 170px;
-}
-#animationFE:hover{
+.animationFE:hover {
     cursor: pointer;
     transition: 0.8s ease-out;
     transform: rotateZ(720deg);
 }
-#animationBE:hover{
+
+.animationBE:hover {
     cursor: pointer;
     transition: 2s ease-out;
     transform: rotateZ(720deg);
 }
-#animationTransverses:hover {
+.animationT:hover {
     cursor: pointer;
     animation: plus 01s linear infinite;
 }
@@ -614,69 +421,20 @@ h4 {
         transform: scale(1.2);
     }
 }
-#animationRelationnelles:hover {
-    cursor: pointer;
-    animation: bounce 0.2s ease infinite alternate;
+.compLogo{
+    width: 8vw;
+    height: 16vh;
+    
+}
+.compImage{
+    min-width: 25vw;
+    min-height: 40vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;   
 }
 
-@keyframes bounce {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-22px);
-    }
-}
-.compFE img{
-    width: 70px;
-    height: 70px;
-}
-.compBE img{
-    width: 70px;
-    height: 70px;
-}
-.compT img{
-    width: 70px;
-    height: 70px;
-}
-
-.compFE {
-    width: 60%;
-    height: 80%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 20%;
-}
-.compBE {
-    width: 70%;
-    height: 80%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 15%;
-}
-.compT {
-    width: 60%;
-    height: 80%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 20%;
-}
-.compR {
-    width: 60%;
-    height: 80%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 20%;
-    font-size: 0.7em;
-}
 
 /*------------------------------------------------*/
 /*Compétences : tableau de maîtrise des langages informatiques*/
@@ -685,18 +443,14 @@ h4 {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    margin-top: 20px;
-}
-.comp p {
-    flex: 0 0 5%;
-    font-weight: bold;
-    font-size: 1.4em;
+    margin-top: 35px;
 }
 
 .conteneur-barre {
-    flex: 0 0 50%;
+    flex: 0 0 90%;
     background-color: white;
-    font-size: 23px;
+    height: 1.8rem;
+    width: 80%
 }
 .barre {
     display: block;
@@ -704,144 +458,211 @@ h4 {
     text-align: right;
     color: white;
     font-weight: bold;
+    
+
 
 }
 .HTML {
     width: 50%;
     background-color: rgb(96, 96, 212);
+    font-size: 1.5rem;
+    color: yellow;
+    text-align: center;
+    
 }
-.HTML:hover{
+.HTML:hover {
     background-color: red;
-     
 }
 .CSS {
     width: 60%;
     background-color: rgb(96, 96, 212);
+    font-size: 1.4rem;
+    color: yellow;
+    text-align: center;
 }
-.CSS:hover{
+.CSS:hover {
     background-color: red;
-     
 }
 .JS {
     width: 30%;
     background-color: rgb(96, 96, 212);
+    font-size: 1.4rem;
+    color: yellow;
+    text-align: center;
 }
-.JS:hover{
+.JS:hover {
     background-color: red;
-     
 }
 .php {
-    width: 5%;
+    width: 25%;
     background-color: rgb(96, 96, 212);
+    font-size: 1.4rem;
+    color: yellow;
+    text-align: center;
 }
-.php:hover{
+.php:hover {
     background-color: red;
-     
 }
 .MySQL {
-    width: 5%;
+    width: 25%;
     background-color: rgb(96, 96, 212);
+    font-size: 1.4rem;
+    color: yellow;
+    text-align: center;
 }
-.MySQL:hover{
+.MySQL:hover {
     background-color: red;
-     
 }
 .VBA {
     width: 75%;
     background-color: rgb(96, 96, 212);
+    font-size: 1.4rem;
+    color: yellow;
+    text-align: center;
 }
-.VBA:hover{
+.VBA:hover {
     background-color: red;
-     
+}
+/*-----------------------------------------------------------------------------------------*/
+/*Section REALISATIONS*/
+
+.realisations{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.projet{
+    /* border-radius: 0px 0px 25px 25px; */
+    flex-direction: row wrap;
+    background: rgba(245, 245, 245, 0.95);
+    border: 2px solid yellow;
+    min-width: 40vw;
+    min-height: 40vh;
+    cursor: pointer;
+    margin: 5vh auto ;
+}
+.projet h2{
+    color: #444;
+    transition: 0.3s;
+    margin: 0;
+}
+.categorie{
+    color: #57c0de;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-top: 0;
+    font-style: italic;
+}
+.description{
+    color: #333;
+    font-size: 1.2rem;
 }
 
-/*.trianglehaut{
-    border-color: transparent transparent red;
-    border-style: solid;
-    border-width: 0 170px 90px;
-    cursor: pointer;
-}*/
+#imgProjet{
+    max-width: 100%;
+    max-height: 100%;
+    transition: 0.3s;
+}
+/*effet au survol de "projet"----------------*/
+/* ::before{
+    content:"";
+    /* position: absolute; */
+    /* top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    opacity: 0.4;
+    background: red;
+    transition: width 1s;
+}
+.projet:hover::before{
+    width: 100%;
+} */ 
+/*------------------------------------------------------*/
+.projCat {
+    color: #57c0de;
+    font-weight: bold;
+    margin-top: 0;
+    font-style: italic;
+}
+.projSpec {
+    color: #333;
+}
 /*-----------------------------------------------------------------------------------*/
 /*Section Diplomes*/
-#boiteFlexibleDiplomes {
-    width: 95%;
-    height: 65%;
-    position: relative;
-    margin: auto;
+.diplomesObtenus{
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.diplome1{
+    border-radius: 25px;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-end;
+    background-color: white;
+    min-width: 26vw;
+    height: 60vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
-.un {
-    width: 34%;
-    height: 20%;
-    text-align: center;
-    background-color: grey;
-    padding-top: 10px;
-    font-weight: bold;
-    color: blue;
-    font-size: 1.3em;
+.diplome2{
+    border-radius: 25px;
+    flex-direction: row;
+    background-color: white;
+    min-width: 26vw;
+    height: 60vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
-.deux {
-    width: 34%;
-    height: 40%;
-    text-align: center;
-    background-color: grey;
-    padding-top: 10px;
-    font-weight: bold;
-    color: blue;
-    font-size: 1.3em;
+.diplome3{
+    border-radius: 25px;
+    flex-direction: row;
+    background-color: white;
+    min-width: 26vw;
+    height: 60vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
-.trois {
-    width: 34%;
-    height: 60%;
-    text-align: center;
-    background-color: grey;
-    padding-top: 10px;
-    font-weight: bold;
-    color: blue;
-    font-size: 1.3em;
-}
-/*#licence {
-    position: relative;
-    top: 285px;
-    left: -400px;
-    text-align: center;
-    font-weight: bold;
+.diplome1 p{
     color: black;
-    font-size: 1.1em;
-}
-#master {
-    position: relative;
-    top: 165px;
-    left: 0px;
+    font-size: 1.8rem;
+    margin-top: 2vh;
+    margin-bottom: 4vh; 
     text-align: center;
-    font-weight: bold;
-    color: black;
-    font-size: 1.2em;
 }
-#titrePro {
-    width: 300px;
-    font-weight: bold;
-    position: relative;
-    top: 25px;
-    left: 400px;
-    text-align: center;
-    font-weight: bold;
+.diplome2 p{
     color: black;
-    font-size: 1.1em;
-}*/
+    font-size: 1.8rem;
+    margin-top: 2vh;
+    margin-bottom: 4vh; 
+    text-align: center;
+}
+.diplome3 p{
+    color: black;
+    font-size: 1.8rem;
+    margin-top: 2vh;
+    margin-bottom: 4vh; 
+    text-align: center;
+}
+#imgDiplome{
+    max-width: 25vw;
+    max-height: 35vh;
+    display: block;
+    margin: auto;
+}
+
 /*---------------------------------------------------------------------------------*/
-/*Centres d'intérêts*/
+/*HOBBIES*/
 .centreInteret {
     width: 100%;
-    height: 50%;
+
     display: flex;
     flex-direction: row wrap;
     justify-content: space-around;
     align-items: center;
     margin-top: 4%;
+    margin-bottom: 4%;
 }
 .interet {
     display: flex;
@@ -849,113 +670,66 @@ h4 {
     align-items: center;
 }
 .interet img {
-    width: 180px;
-    height: 180px;
+    width: 11rem;
+    height: 11rem;
     border-radius: 50%;
     box-shadow: 0px 0px 15px #555;
 }
 figcaption {
-    width: 400px;
-    font-size: 1.5em;
+    width: 22rem;
+    font-size: 1.3em;
     margin-top: 10px;
     text-align: center;
+    color: white;
 }
-/*.centreInteret figure:nth-child(1):hover {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 4%;
-}*/
+
 /*-----------------------------------------------------------------------------------*/
 /*Contact*/
-
-.boiteFlexibleSecondaireContact{
-    width: 100%;
-    height: 500px;
+.contact{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
     margin-top: 5vh;
+    margin-bottom: 5vh;
 }
-.boiteFlexible1Contact{
-    width: 400px;
-    height: 380px;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-   
+.coordonnees{
+    flex-direction: row;
+    background: rgba(245, 245, 245, 0.95);
+    min-width: 25vw;
+    min-height: 35vh;
+    cursor: pointer;
 }
-.boiteFlexible2Contact{
-    width: 400px;
-    height: 380px;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    
-}
-.boiteFlexible3Contact{
-    width: 400px;
-    height: 380px;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-   
-}
-.element1Contact{
-    width: 400px;
-    height: 85px;
-    margin-bottom: 7px;
-}
-.element2Contact{
-    width: 400px;
-    height: 150px;
-    background-color: white;
-}
-.element2Contact p{
+.coordonnees h2{
+    color: black;
+    font-size: 1.8rem;
     text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-top: 13%;
+    margin-top: 8vh;
 }
-.element3Contact{
-    width: 400px;
-    height: 4px;
-    margin-top: 5px;
-}
-#enteteTelephone{
+#enteteTelephone {
     background-color: orange;
+    height: 12vh;
 }
-#enteteMail{
+#enteteMail {
     background-color: #00bfff;
+    height: 12vh;
 }
-#enteteAdresse{
+#enteteAdresse {
     background-color: #32cd32;
+    height: 12vh;
 }
-#traitTelephone{
-    background-color: orange;
+.imgCoordonnees{
+    width: 90px;
+    height: 95px;
+    margin-top: 6vh;
+    display: block;
+    margin: auto;
 }
-#traitMail{
-    background-color: #00bfff;
-}
-#traitAdresse{
-    background-color: #32cd32;
-}
-.element1Contact img {
-    width: 70px;
-    height: 70px;
-    margin-top: 6px;
-    margin-left: 170px;
-}
-#animationTelephone:hover{
+#animationTelephone:hover {
     cursor: pointer;
     transition: 0.8s ease-out;
     transform: rotateZ(720deg);
 }
-#animationMail:hover{
+#animationMail:hover {
     cursor: pointer;
     transition: 2s ease-out;
     transform: rotateZ(720deg);
@@ -974,1376 +748,783 @@ figcaption {
 }
 
 
-.CV{
-    width: 200px;
-    height: 300px;
+
+.CV {
+    width: 19vw;
+    height: 40vh;
+    
 }
-#CV{
+#CV {
     width: 100%;
     height: 400px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-
-}
-#CV p{
+    cursor: pointer;
+} 
+#CV p {
     font-size: 1.3em;
     font-weight: bold;
-    margin-top: 1vh;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    color: white;
 }
-.formulaireContact{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.formulaireContact {
+
     font-size: 1.3em;
     font-weight: bold;
+    color: yellow;
+    margin-bottom: 5vh;
 }
 
 
+/*RETOUR HAUT DE PAGE-----------------------------------------*/
+a#cRetour{
+    border-radius:100%;
+    padding:35px;
+    font-size: 50px;
+    text-align:center;
+    color:#fff;
+    background:rgba(0, 0, 0, 0.5);
+    position:fixed;
+    opacity:1;
+    z-index:99999;
+    transition:all ease-in 0.5s;
+    backface-visibility: hidden;
+    text-decoration: none;
+  }
+  a#cRetour:before{ 
+    content: "\25b2";
+    margin-left: 11px; 
+    margin-top: 2px;
+  }
+  a#cRetour:hover{
+    background:rgba(0, 0, 0, 1);
+    transition: all ease-in 0.2s;
+  }
+  a#cRetour.cInvisible{
+    right:-35px;
+    opacity: 0;
+    transition: all ease-in 1s;
+  }
+  
+  a#cRetour.cVisible{
+    bottom: 12px;
+    opacity: 1;
+  }
 
 
 
-/*.formulaireContact {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 70px;
-}
-#plume {
-    width: 50%;
-    height: 50%;
-}
-.formulaireContact p {
-    margin-top: 7vh;
-    margin-left: -2.8vw;
-    font-size: 1.7em;
-    font-weight: bold;
-}
-.BFC3 {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.frameCV {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.frameCV p {
-    margin-top: 5%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-.CV {
-    width: 200px;
-    height: 300px;
-}*/
+/*MEDIA QUERY---------------------------------------------------------------------------------------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*MEDIA QUERIES---------------------------------------------------------------------------------------*/
-/*@media screen and (min-width: 1590px) and (max-width: 1850px) {
-    #photoPierre {
-        position: relative;
-        left: 24%;
-    }
-}
-    /*Effet machine à cérire sur le titre*/
-    /*.typewriter-text {
-        width: 23%;
-        display: inline-block;
-        overflow: hidden;
-        letter-spacing: 2px;
-        animation: typing 5s steps(30, end) infinite,
-            blink 0.7s step-end infinite;
-        white-space: nowrap;
-        font-size: 1.3rem;
-        border-right: 4px solid white;
-        box-sizing: border-box;
-    }
-
-    @keyframes typing {
-        from {
-            width: 0%;
-        }
-        to {
-            width: 23%;
-        }
-    }
-
-    @keyframes blink {
-        from,
-        to {
-            border-color: transparent;
-        }
-        23% {
-            border-color: white;
-        }
-    }
-
-    /*Défilement texte Star Wars*/
-    /*.star {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        background-color: white;
-    }
-    #title,
-    #subtitle,
+/*MEDIA QUERIES-------------------------------------------------------*/
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    /*A PROPOS*/
     #text {
-        color: yellow;
-    }
-
-    /* Set the font, lean the board, position it */
-    /*#board {
-        font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-        transform: perspective(300px) rotateX(25deg);
-        transform-origin: 50% 100%;
+        
+        width: 80%;
+        display: block;
+        margin: auto;
         text-align: justify;
-        position: absolute;
-        margin-left: -25%;
-        padding: 0 15px;
+        font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
         font-weight: bold;
-        overflow: hidden;
-        font-size: 250%;
-        height: 270%;
-        width: 49%;
-        bottom: 5%;
-        left: 50%;
+        font-size: 1.3rem;
     }
+    .conteneur{
+        margin-bottom: 10vh; 
+    }
+    
+/*--------------------------------------------------------------------------------*/
+/*Compétences*/
 
-    #board:after {
-        position: absolute;
-        content: " ";
-        bottom: 60%;
-        left: 0;
-        right: 0;
-        top: 0;
-    }
 
-    /* Set the scrolling animation and position it */
-    /*#content {
-        animation: scroll 30s linear 6s infinite;
-        position: absolute;
-        top: 100%;
-    }
+.competences{
+    /* display: flex; */
+    flex-flow: column wrap;
+    /* justify-content: space-around;
+    align-items: center; */
+    margin-top: 5vh;
+    margin-bottom: 5vh;  
+}
+.competencesMetier{
+    /* flex-flow: row wrap;
+    background: rgba(245, 245, 245, 0.95); */
+    width: 90%;
+    /* cursor: pointer;
+    margin: 5vh auto; */
+}
+#compAnimation{
+    /* width: 80px; */
+    height: 125px;
+    /* display: block;
+    margin-top: auto; */
+}
+#enteteFE {
+    height: 20vh;
+}
+#enteteBE {
+    height: 20vh;
+}
+#enteteT {
+    height: 20vh;
+}
 
-    #title,
-    #subtitle {
-        text-align: center;
-    }
-    #photoPierre {
-        position: relative;
-        left: 23%;
-    }
-
-    @keyframes scroll {
-        0% {
-            top: 100%;
-        }
-        100% {
-            top: 0%;
-        }
-    }
-    section article:nth-child(2) {
-        height: 130vh;
-    }
-    section article:nth-child(4) {
-        background-color: #c4c4c4;
+    /*---------------------------------------------------------------------------------*/
+    /*Hobbies*/
+    .centreInteret {
         width: 100%;
-        height: 150vh;
-    }
-    /*-----------------------------------------------------------------------------------*/
-
-    /*section article:nth-child(6) {
-        height: 70vh;
-    }
-    section article:nth-child(7) {
-        height: 110vh;
-    }*/
-
-
-/*MEDIA QUERIES---------------------------------------------------------------------------------------*/
-@media screen and (min-width: 1260px) and (max-width: 1589px) {
-   
-   
-
-    /* Set the font, lean the board, position it */
-    #board {
-        font-size: 300%;
-        width: 55%;
-        left: 47%;
-    }
-
-    #photoPierre {
-        position: relative;
-        left: 18%;
-    }
-    /*-------------------------------------------------------------------*/
-    /*Compétences*/
-    #boiteFlexibleCompetence {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
-        margin-top: 70px;
-    }
-    .comp p {
-        flex: 0 0 10%;
-        font-weight: bold;
-        font-size: 1.4em;
-    }
-    /*----------------------------------------------------------*/
-    /*Section Compétences*/
-    section article:nth-child(2) {
-        height: 180vh;
-    }
-    /*----------------------------------------------------------*/
-    section article:nth-child(4) {
-        background-color: #c4c4c4;
-        width: 100%;
-        height: 180vh;
+        align-items: center;
+        margin-top: 3vh;
+        margin-left: 0%;  
     }
    
-  
-    
-    /*---------------------------------------------------------------------------------*/
-    /*Centres d'intérêts*/
-    .interet img {
-        width: 160px;
-        height: 160px;
-    }
     figcaption {
-        width: 300px;
-        font-size: 1.2em;
+        font-size: 1.0rem;
+        margin-bottom: 8vh;
     }
 
-    section article:nth-child(6) {
-        height: 70vh;
+    /*---------------------------------------------------------------------------*/
+    /*Contact*/
+    /* .boiteFlexibleGénéraleContact{
+        height: 110vh;
+        margin-bottom: 30vh
+    } */
+    #boiteFlexibleContact {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around; 
     }
+    #boiteFlexible2Contact{
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+    }
+    #boiteFlexible3Contact{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;  
+    } 
+    .boiteFlexibleSecondaireContact{
+        height: 110vh;
+        margin-bottom: 20vh;
+        margin-top: 5%;
+    }
+    .CV {
+        width: 25%;
+        height: 65%;    
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     /*-------------------------------------------------------------------------------*/
+    footer {
+        width: 100%;
+        height: 35vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #555d5e;
+    }
     /*Taille image dans le */
     .imagesFooter {
-        width: 6vw;
-        height: 10vh;
+        width: 12vw;
+        height: 18vh;
         margin: 5px 50px;
     }
 }
-/*MEDIA QUERIES---------------------------------------------------------------------------------------*/
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-    
-    /*--------------------------------------------------------------------------------*/
-.star {
-    display: none;
-}
+/*-----------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 300px) and (max-width: 767px) {
+    header{
+        padding-right: 10vw;
+        text-align: center;
+        margin-right: 50px;
+    }
+    #name{
+        font-size: 1.5rem;
+        font-style: bold;
+        text-align: center;
+    }
+    .poste{
+        color: lightgrey;
+        font-size: 0.8rem;
+        font-style: bold;
+        text-align: center;
+    }
+    hr {
+        width: 13rem;
+        height: 0.3vh;
+        
+        background-color: white;
+        margin: 5px auto;
+    }
 
+    /*RETOUR HAUT DE PAGE-----------------------------------------*/
+a#cRetour{
+    padding:25px;
+    font-size: 40px;
+  }
+  a#cRetour:before{ 
+    margin-left: 6px; 
+    margin-top: 1px;
+  }
+ 
+  a#cRetour.cInvisible{
+    bottom:-25px;
+  }
+/*-------------------------------------*/
+    #text {
+        color: yellow;
+        width: 80%;
+        display: block;
+        margin: auto;
+        text-align: justify;
+        font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+        font-weight: bold;
+        font-size: 0.8rem;
+        margin-bottom: 8vh
+    }
+/*---------------------------------------------------------------------------------*/
+/*Timeline*/
+    .marker {
+     display: none;
+    }
+    .timeline-content {
+        width: 95%;
+        padding: 0 15px;
+        color: yellow;
+    }
+    .timeline-content span {
+        font-size: 15px;
+        color: white;
+    }
+    .timeline-content p {
+       display: none;
+    }
 
-/* Set the font, lean the board, position it */
-#board {
-   display:none;
+/*-----------------------------------------------------------------------------------*/
+/*Section Diplomes*/
+
+.diplome1{
+    border-radius: 25px;
+    flex-direction: row;
+    background-color: white;
+    width: 90%;
+    /* min-width: 26vw;
+    height: 60vh; */
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
-section article:nth-child(2) {
-    background-color: #c4c4c4;
-    width: 100%;
-    height: 200vh;
+.diplome2{
+    border-radius: 25px;
+    flex-direction: row;
+    background-color: white;
+    width: 90%;
+    /* min-width: 26vw;
+    height: 60vh; */
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
-section article:nth-child(3) {
-    background-color: #d3d3d3;
-    width: 100%;
-    height: 80vh;
+.diplome3{
+    border-radius: 25px;
+    flex-direction: row;
+    background-color: white;
+    width: 90%;
+    /* min-width: 26vw;
+    height: 60vh; */
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
-section article:nth-child(4) {
-    background-color: #c4c4c4;
-    width: 100%;
-    height: 230vh;
-}    
-section article:nth-child(5) {
-    background-color: #d3d3d3;
-    width: 100%;
-    height: 90vh;
+#imgDiplome{
+    max-width: 40vw;
+    max-height: 50vh;
+    display: block;
+    margin: auto;
 }
-.un {
-    font-size: 1.1em;
-}
-.deux {
-    font-size: 1.1em;
-}
-.trois {
-    font-size: 1.1em;
-}
-section article:nth-child(6) {
-    background-color: #c4c4c4;
-    width: 100%;
-    height: 120vh;
-}
+/*---------------------------------------------------------------------------------*/
 /*Centres d'intérêts*/
 .centreInteret {
     width: 100%;
-    height: 50%;
+
     display: flex;
-    flex-direction: row wrap;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-top: 4%;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
 }
 .interet {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    margin-bottom: 10vh;
 }
-.interet img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 15px #555;
+/*---------------------------------------------------------------------------------*/
+/*Footer*/
+
+/*---------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+/*Compétences*/
+
+
+.competences{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    
 }
-figcaption {
-    width: 400px;
-    font-size: 1.5em;
-    margin-top: 10px;
+.competencesMetier{
+    flex-direction: column;
+    background: rgba(245, 245, 245, 0.95);
+    width: 90%;
+    height: 90%;
+    cursor: pointer;
+    margin: 5vh auto;
+}
+.type{
+    color: grey;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    font-weight: bold;
+}
+#enteteFE {
+    background-color: orange;
+    height: 25vh;
+}
+#enteteBE {
+    background-color: #00bfff;
+    height: 25vh;
+}
+#enteteT {
+    background-color: #32cd32;
+    height: 25vh;
+}
+#compAnimation{
+    width: 20vw;
+    height: 25vh;
+    /* display: block; */
+    margin: auto;
+}
+.animationFE:hover {
+    cursor: pointer;
+    transition: 0.8s ease-out;
+    transform: rotateZ(720deg);
+}
+
+.animationBE:hover {
+    cursor: pointer;
+    transition: 2s ease-out;
+    transform: rotateZ(720deg);
+}
+.animationT:hover {
+    cursor: pointer;
+    animation: plus 01s linear infinite;
+}
+@keyframes plus {
+    from {
+        transform: scale(0.2);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+.compLogo{
+    min-width: 22vw;
+    min-height: 10vh;
+    margin: auto;
+}
+    
+
+.compImage{
+    min-width: 25vw;
+    min-height: 40vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;   
+}
+/*------------------------------------------------*/
+/*Compétences : tableau de maîtrise des langages informatiques*/
+.comp {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.conteneur-barre {
+    flex: 0 0 90%;
+    background-color: white;
+    height: 1.8rem;
+    width: 80%
+}
+.barre {
+    display: block;
+    height: 100%;
+    text-align: right;
+    color: white;
+    font-weight: bold;
+}
+.HTML {
+    font-size: 1.3rem;
+    color: yellow;
+    text-align: left;
+    
+}
+.HTML:hover {
+    background-color: red;
+}
+.CSS {
+    font-size: 1.3rem;
+    text-align: left;
+    color: yellow;
+}
+.CSS:hover {
+    background-color: red;
+}
+.JS {
+    font-size: 1.3rem;
+    text-align: left;
+    color: yellow;
+}
+.JS:hover {
+    background-color: red;
+}
+.php {
+    font-size: 1.3rem;
+    text-align: left;
+    color: yellow;
+}
+.php:hover {
+    background-color: red;
+}
+.MySQL {
+    font-size: 1.3rem;
+    text-align: left;
+    color: yellow;
+}
+.MySQL:hover {
+    background-color: red;
+    color: yellow;
+}
+.VBA {
+    font-size: 1.3rem;
+    text-align: left;
+    color: yellow;
+}
+.VBA:hover {
+    background-color: red;
+}
+/*--------------------------------------------------------------------------------*/
+/*Compétences*/
+.competences{
+    /* display: flex; */
+    flex-flow: column wrap;
+    /* justify-content: space-around;
+    align-items: center; */
+    margin-top: 10vh;
+    margin-bottom: 10vh;  
+}
+.competencesMetier{
+    /* flex-flow: row wrap;
+    background: rgba(245, 245, 245, 0.95); */
+    width: 90%;
+    /* cursor: pointer;
+    margin: 5vh auto; */
+}
+#compAnimation{
+    /* width: 80px; */
+    height: 95%;
+    /* display: block;
+    margin-top: auto; */
+}
+#enteteFE {
+    height: 25vh;
+}
+#enteteBE {
+    height: 25vh;
+}
+#enteteT {
+    height: 25vh;
+}
+.compLogo{
+    width: 15%;
+    height: 15%;
+    
+}
+/*-----------------------------------------------------------------------------------*/
+/*Section Diplomes*/
+.diplomesObtenus{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.diplome1{
+    width: 90%;
+    height: 70vh;
+}
+.diplome2{
+    width: 90%;
+    height: 70vh;
+}
+.diplome3{
+    width: 90%;
+    height: 70vh;
+}
+.diplome1 p{
+    font-size: 1.5rem;
+}
+.diplome2 p{
+    font-size: 1.5rem;
+}
+.diplome3 p{
+    font-size: 1.5rem;   
+}
+#imgDiplome{
+    max-width: 100%;
+    max-height: 30vh;
+}
+
+/*---------------------------------------------------------------------------------*/
+/*Footer*/
+footer div p{
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 1vh;
+}
+/*Taille image dans le footer*/
+.imagesFooter {
+    width: 75%;
+    height: 75%;
+    /* margin: 5px 50px; */
+}
+/*-----------------------------------------------------------------------------------*/
+/*Contact*/
+.contact{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    /* margin-top: 5vh; */
+    /* margin-bottom: 5vh; */
+}
+.coordonnees{
+    flex-direction: column;
+    background: rgba(245, 245, 245, 0.95);
+    width: 100%;
+    min-height: 40vh;
+    cursor: pointer;
+    margin-bottom: 10vh;
+    
+}
+.coordonnees h2{
+    color: black;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 8vh;
+}
+#enteteTelephone {
+    background-color: orange;
+    height: 16vh;
+}
+#enteteMail {
+    background-color: #00bfff;
+    height: 16vh;
+}
+#enteteAdresse {
+    background-color: #32cd32;
+    height: 16vh;
+}
+.imgCoordonnees{
+    width: 100%;
+    height: 100%;  
+}
+.CV {
+    min-width: 120px;
+    min-height: 180px;
+    margin-bottom: 8vh;
+    
+}
+#CV {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+} 
+#CV p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    color: white;
     text-align: center;
 }
-section article:nth-child(7) {
-    background-color: #d3d3d3;
+.formulaireContact {
+
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: yellow;
+    margin-bottom: 5vh;
+}
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+
+/*Compétences*/
+.competences{
+    /* display: flex; */
+    flex-flow: column wrap;
+    /* justify-content: space-around;
+    align-items: center; */
+    margin-top: 10vh;
+    margin-bottom: 10vh;  
+}
+.competencesMetier{
+    /* flex-flow: row wrap;
+    background: rgba(245, 245, 245, 0.95); */
+    width: 90%;
+    /* cursor: pointer;
+    margin: 5vh auto; */
+}
+#compAnimation{
+    /* width: 80px; */
+    height: 95%;
+    /* display: block;
+    margin-top: auto; */
+}
+#enteteFE {
+    height: 25vh;
+}
+#enteteBE {
+    height: 25vh;
+}
+#enteteT {
+    height: 25vh;
+}
+.compLogo{
+    min-width: 22vw;
+    min-height: 10vh;
+    margin: auto;
+    
+}
+/*-----------------------------------------------------------------------------------*/
+/*Section Diplomes*/
+.diplome1{
+    border-radius: 25px;
+    flex-direction: row;
+    background-color: white;
+    width: 90%;
+    /* min-width: 26vw;
+    height: 60vh; */
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.diplome2{
+    border-radius: 25px;
+    flex-direction: row;
+    background-color: white;
+    width: 90%;
+    /* min-width: 26vw;
+    height: 60vh; */
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.diplome3{
+    border-radius: 25px;
+    flex-direction: row;
+    background-color: white;
+    width: 90%;
+    /* min-width: 26vw;
+    height: 60vh; */
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+#imgDiplome{
+    max-width: 40vw;
+    max-height: 32vh;
+    display: block;
+    margin: auto;
+}
+/*-----------------------------------------------------------------------------------*/
+/*Contact*/
+.contact{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    /* margin-top: 5vh; */
+    /* margin-bottom: 5vh; */
+}
+.coordonnees{
+    flex-direction: column;
+    background: rgba(245, 245, 245, 0.95);
     width: 100%;
-    height: 140vh;
-}
-
-}
-/*MEDIA QUERIES---------------------------------------------------------------------------------------*/
-/*@media screen and (min-width: 790px) and (max-width: 999px) {    
-    /*Effet machine à écrire sur le titre*/
-    /*.typewriter-text {
-        width: 35%;
-        animation: typing 0s steps(30, end) infinite;
-    }
-
-    /*Effet de défilement du texte Star Wars*/
-    /*.star {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        background-color: white;
-    }
-    #text {
-        color: yellow;
-        display: flex;
-    }
-    /* Set the scrolling animation and position it */
-    /*#content {
-        animation: scroll 0s linear 6s infinite;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    #title,
-    #subtitle {
-        display: none;
-    }
-    #photoPierre {
-        position: relative;
-        left: 28%;
-    }
-    /*-------------------------------------------------------------------*/
-    /*Compétences*/
-    /*#boiteFlexibleCompetence {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        margin-top: 70px;
-    }
-    .comp p {
-        flex: 0 0 10%;
-        font-weight: bold;
-    }
-    /*----------------------------------------------------------*/
-    /*Section Compétences*/
-    /*section article:nth-child(2) {
-        height: 400vh;
-    }
-    /*----------------------------------------------------------*/
-    /*Section Réalisations*/
-    /*section article:nth-child(3) {
-        background-color: #d3d3d3;
-        width: 100%;
-        height: 120vh;
-    }
-    #boiteFlexibleRealisations {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        margin-top: 5%;
-    }
-    /*----------------------------------------------------------*/
-    /*section article:nth-child(4) {
-        background-color: #c4c4c4;
-        width: 100%;
-        height: 420vh;
-    }
-    /*----------------------------------------------------------*/
-    /*Section Diplomes*/
-    /*section article:nth-child(5) {
-        background-color: #d3d3d3;
-        width: 100%;
-        height: 70vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    #boiteFlexibleDiplomes {
-        margin-bottom: 10%;
-    }
-    .un {
-        width: 44%;
-        height: 25%;
-        font-size: 0.8em;
-    }
-    .deux {
-        width: 44%;
-        height: 50%;
-        font-size: 0.8em;
-    }
-    .trois {
-        width: 44%;
-        height: 75%;
-        font-size: 0.8em;
-    }
-    #licence {
-        width: 130px;
-        top: 350px;
-        left: -150px;
-        font-size: 0.7em;
-    }
-    #master {
-        top: 238px;
-        left: 0px;
-        font-size: 0.7em;
-    }
-    #titrePro {
-        width: 150px;
-        top: 105px;
-        left: 149px;
-        font-size: 0.7em;
-    }
-    /*---------------------------------------------------------------------------------*/
-    /*Centres d'intérêts*/
-/*.centreInteret {
-        width: 100%;
-        height: 50%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 6%;
-        margin-left: 0%;
-    }
-    .interet img {
-        width: 180px;
-        height: 180px;
-    }
-    figcaption {
-        width: 300px;
-        font-size: 1.2em;
-    }
-
-    section article:nth-child(6) {
-        height: 130vh;
-    }
-    /*---------------------------------------------------------------------------*/
-    /*Contact*/
-    /*section article:nth-child(7) {
-        height: 250vh;
-    }
-    #boiteFlexibleContact {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        margin-top: 70px;
-    }
-    #boiteFlexibleContact2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 5%;
-    }
-    /*-------------------------------------------------------------------------------*/
-    /*footer {
-        width: 100%;
-        height: 30vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #555d5e;
-    }
-    /*Taille image dans le */
-    /*.imagesFooter {
-        width: 9vw;
-        height: 14vh;
-        margin: 5px 50px;
-    }
-}
-/*MEDIA QUERIES---------------------------------------------------------------------------------------*/
-@media screen and (min-width: 660px) and (max-width: 789px) {
-    /*Effet machine à écrire sur le titre*/
-    .typewriter-text {
-        width: 35%;
-        animation: typing 0s steps(30, end) infinite;
-    }
-
-    /*Effet de défilement du texte Star Wars*/
-    .star {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        background-color: white;
-    }
-    #text {
-        color: yellow;
-        display: flex;
-    }
-    /* Set the scrolling animation and position it */
-    #content {
-        animation: scroll 0s linear 6s infinite;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    #title,
-    #subtitle {
-        display: none;
-    }
-    #photoPierre {
-        position: relative;
-        left: 28%;
-    }
-    /*-------------------------------------------------------------------*/
-    /*Compétences*/
-    #boiteFlexibleCompetence {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        margin-top: 70px;
-    }
-    .comp p {
-        flex: 0 0 15%;
-        font-weight: bold;
-    }
-    .conteneur-barre {
-        flex: 0 0 60%;
-        background-color: white;
-    }
-    /*----------------------------------------------------------*/
-    /*Section Compétences*/
-    section article:nth-child(2) {
-        height: 670vh;
-    }
-    /*----------------------------------------------------------*/
-    /*Section Réalisations*/
-    section article:nth-child(3) {
-        background-color: #d3d3d3;
-        width: 100%;
-        height: 360vh;
-    }
-    #boiteFlexibleRealisations {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        margin-top: 5%;
-    }
-    /*----------------------------------------------------------*/
-    section article:nth-child(4) {
-        background-color: #c4c4c4;
-        width: 100%;
-        height: 790vh;
-    }
-    /*----------------------------------------------------------*/
-    /*Section Diplomes*/
-    section article:nth-child(5) {
-        background-color: #d3d3d3;
-        width: 100%;
-        height: 120vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    #boiteFlexibleDiplomes {
-        margin: auto;
-    }
-    .un {
-        width: 54%;
-        height: 25%;
-        font-size: 0.8em;
-    }
-    .deux {
-        width: 54%;
-        height: 50%;
-        font-size: 0.8em;
-    }
-    .trois {
-        width: 54%;
-        height: 75%;
-        font-size: 0.8em;
-    }
-    #licence {
-        width: 130px;
-        top: 220px;
-        left: -140px;
-        font-size: 0.7em;
-    }
-    #master {
-        top: 108px;
-        left: 0px;
-        font-size: 0.7em;
-    }
-    #titrePro {
-        width: 130px;
-        top: -30px;
-        left: 137px;
-        font-size: 0.7em;
-    }
-    /*---------------------------------------------------------------------------------*/
-    /*Centres d'intérêts*/
-    .centreInteret {
-        width: 100%;
-        height: 50%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 6%;
-        margin-left: 0%;
-    }
-    .interet img {
-        width: 180px;
-        height: 180px;
-    }
-    figcaption {
-        width: 300px;
-        font-size: 1.2em;
-    }
-
-    section article:nth-child(6) {
-        height: 170vh;
-    }
-    /*---------------------------------------------------------------------------*/
-    /*Contact*/
-    section article:nth-child(7) {
-        height: 380vh;
-    }
-    #boiteFlexibleContact {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        margin-top: 70px;
-    }
-    #boiteFlexibleContact2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 5%;
-    }
-    /*-------------------------------------------------------------------------------*/
-    footer {
-        width: 100%;
-        height: 30vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #555d5e;
-    }
-    /*Taille image dans le */
-    .imagesFooter {
-        width: 12vw;
-        height: 18vh;
-        margin: 5px 50px;
-    }
-}
-/*-----------------------------------------------------------------------------------------------*/
-@media screen and (min-width: 570px) and (max-width: 789px) {
-        /*Menu déroulant*/
-        #sidebar {
-            position: fixed;
-            width: 250px;
-            height: 100vh;
-            background:grey;
-            left: -250px;
-            transition: all 400ms linear;
-            z-index: 10000;
-        }
-        #sidebar.active {
-            left: 0px;
-        }
-        #sidebar ul li {
-            color: white;
-            padding: 11px 10px;
-            border-bottom: 1px solid white;
-            text-align: left;
-        }
-        #sidebar ul li a {
-            text-decoration: none;
-            font-size: 1.5em;
-            color: white;
-        }
-        #sidebar .toggle-btn {
-            position: absolute;
-            left: 280px;
-            top: 20px;
-        }
-        #sidebar .toggle-btn span {
-            display: block;
-            width: 35px;
-            height: 5px;
-            background: white;
-            margin: 6px 0px;
-            border-radius: 15px;
-        }
-        /*Script pour transformer l'icône du menu de navigation en croix---------------------------------------------*/
-        .toggle-btn {
-            display: inline-block;
-            cursor: pointer;
-            position: fixed;
-        }
-        .bar1,
-        .bar2,
-        .bar3 {
-            width: 35px;
-            height: 5px;
-            margin: 6px 0;
-            transition: 0.4s;
-        }
-        .change .bar1 {
-            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-            transform: rotate(-45deg) translate(-9px, 6px);
-        }
-        .change .bar2 {
-            opacity: 0;
-        }
-        .change .bar3 {
-            -webkit-transform: rotate(45deg) translate(-8px, -8px);
-            transform: rotate(45deg) translate(-8px, -8px);
-        }
-    /*Effet machine à écrire sur le titre*/
-    .typewriter-text {
-        width: 35%;
-        animation: typing 0s steps(30, end) infinite;
-    }
-
-    /*Effet de défilement du texte Star Wars*/
-    .star {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        background-color: white;
-    }
-    #text {
-        color: yellow;
-        display: flex;
-    }
-    /* Set the scrolling animation and position it */
-    #content {
-        animation: scroll 0s linear 6s infinite;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    #title,
-    #subtitle {
-        display: none;
-    }
-    #photoPierre {
-        position: relative;
-        left: 28%;
-    }
-    /*-------------------------------------------------------------------*/
-    /*Compétences*/
-    #boiteFlexibleCompetence {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        margin-top: 70px;
-    }
-    .comp p {
-        flex: 0 0 15%;
-        font-weight: bold;
-    }
-    .conteneur-barre {
-        flex: 0 0 60%;
-        background-color: white;
-    }
-    /*----------------------------------------------------------*/
-    /*Section Compétences*/
-    section article:nth-child(2) {
-        height: 580vh;
-    }
-    /*----------------------------------------------------------*/
-    /*Section Réalisations*/
-    section article:nth-child(3) {
-        background-color: #d3d3d3;
-        width: 100%;
-        height: 300vh;
-    }
-    #boiteFlexibleRealisations {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        margin-top: 5%;
-    }
-    /*----------------------------------------------------------*/
-    section article:nth-child(4) {
-        background-color: #c4c4c4;
-        width: 100%;
-        height: 800vh;
-    }
-    /*----------------------------------------------------------*/
-    /*Section Diplomes*/
-    section article:nth-child(5) {
-        background-color: #d3d3d3;
-        width: 100%;
-        height: 120vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    #boiteFlexibleDiplomes {
-        margin: auto;
-    }
-    .un {
-        width: 54%;
-        height: 25%;
-        font-size: 0.8em;
-    }
-    .deux {
-        width: 54%;
-        height: 50%;
-        font-size: 0.8em;
-    }
-    .trois {
-        width: 54%;
-        height: 75%;
-        font-size: 0.8em;
-    }
-    #licence {
-        width: 130px;
-        top: 220px;
-        left: -140px;
-        font-size: 0.7em;
-    }
-    #master {
-        top: 108px;
-        left: 0px;
-        font-size: 0.7em;
-    }
-    #titrePro {
-        width: 130px;
-        top: -30px;
-        left: 137px;
-        font-size: 0.7em;
-    }
-    /*---------------------------------------------------------------------------------*/
-    /*Centres d'intérêts*/
-    .centreInteret {
-        width: 100%;
-        height: 50%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 6%;
-        margin-left: 0%;
-    }
-    .interet img {
-        width: 180px;
-        height: 180px;
-    }
-    figcaption {
-        width: 300px;
-        font-size: 1.2em;
-    }
-
-    section article:nth-child(6) {
-        height: 190vh;
-    }
-    /*---------------------------------------------------------------------------*/
-    /*Contact*/
-    section article:nth-child(7) {
-        height: 380vh;
-    }
-    #boiteFlexibleContact {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        margin-top: 70px;
-    }
-    #boiteFlexibleContact2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 5%;
-    }
-    /*-------------------------------------------------------------------------------*/
-    footer {
-        width: 100%;
-        height: 30vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #555d5e;
-    }
-    /*Taille image dans le */
-    .imagesFooter {
-        width: 12vw;
-        height: 18vh;
-        margin: 5px 50px;
-    }
-}
-/*-----------------------------------------------------------------------------------------------*/
-@media screen and (min-width: 470px) and (max-width: 569px) {
-    /*Effet machine à écrire sur le titre*/
-    .typewriter-text {
-        width: 35%;
-        animation: typing 0s steps(30, end) infinite;
-    }
-
-    /*Effet de défilement du texte Star Wars*/
-    .star {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        background-color: white;
-    }
-    #text {
-        color: yellow;
-        display: flex;
-    }
-    /* Set the scrolling animation and position it */
-    #content {
-        animation: scroll 0s linear 6s infinite;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    #title,
-    #subtitle {
-        display: none;
-    }
-    #photoPierre {
-        position: relative;
-        left: 28%;
-    }
-    /*-------------------------------------------------------------------*/
-    /*Compétences*/
-    #boiteFlexibleCompetence {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        margin-top: 70px;
-    }
-    .comp p {
-        flex: 0 0 15%;
-        font-weight: bold;
-    }
-    .conteneur-barre {
-        flex: 0 0 60%;
-        background-color: white;
-    }
-    /*----------------------------------------------------------*/
-    /*Section Compétences*/
-    section article:nth-child(2) {
-        height: 670vh;
-    }
-    /*----------------------------------------------------------*/
-    /*Section Réalisations*/
-    section article:nth-child(3) {
-        background-color: #d3d3d3;
-        width: 100%;
-        height: 360vh;
-    }
-    #boiteFlexibleRealisations {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        margin-top: 5%;
-    }
-    /*----------------------------------------------------------*/
-    section article:nth-child(4) {
-        background-color: #c4c4c4;
-        width: 100%;
-        height: 790vh;
-    }
-    /*----------------------------------------------------------*/
-    /*Section Diplomes*/
-    section article:nth-child(5) {
-        background-color: #d3d3d3;
-        width: 100%;
-        height: 120vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    #boiteFlexibleDiplomes {
-        margin: auto;
-    }
-    .un {
-        width: 54%;
-        height: 25%;
-        font-size: 0.8em;
-    }
-    .deux {
-        width: 54%;
-        height: 50%;
-        font-size: 0.8em;
-    }
-    .trois {
-        width: 54%;
-        height: 75%;
-        font-size: 0.8em;
-    }
-    #licence {
-        width: 130px;
-        top: 220px;
-        left: -140px;
-        font-size: 0.7em;
-    }
-    #master {
-        top: 108px;
-        left: 0px;
-        font-size: 0.7em;
-    }
-    #titrePro {
-        width: 130px;
-        top: -30px;
-        left: 137px;
-        font-size: 0.7em;
-    }
-    /*---------------------------------------------------------------------------------*/
-    /*Centres d'intérêts*/
-    .centreInteret {
-        width: 100%;
-        height: 50%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 6%;
-        margin-left: 0%;
-    }
-    .interet img {
-        width: 180px;
-        height: 180px;
-    }
-    figcaption {
-        width: 300px;
-        font-size: 1.2em;
-    }
-
-    section article:nth-child(6) {
-        height: 170vh;
-    }
-    /*---------------------------------------------------------------------------*/
-    /*Contact*/
-    section article:nth-child(7) {
-        height: 380vh;
-    }
-    #boiteFlexibleContact {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        margin-top: 70px;
-    }
-    #boiteFlexibleContact2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 5%;
-    }
-    /*-------------------------------------------------------------------------------*/
-    footer {
-        width: 100%;
-        height: 30vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #555d5e;
-    }
-    /*Taille image dans le */
-    .imagesFooter {
-        width: 12vw;
-        height: 18vh;
-        margin: 5px 50px;
-    }
-}
-/*-----------------------------------------------------------------------------------------------*/
-@media screen and (min-width: 375px) and (max-width: 479px) {
-    h1{
-        font-size: 36px;
-    }
-    hr {
-        width: 95%;
-        height: 0.1vh;
-        background-color: white;
-    }
-    /*Modification de la taille du titre*/
-    .name {
-        font-size: 1.7em;
-        text-align: center;
-        font-style: bold;
-    }
-    /*modification de la taille de l'intitulé du poste*/
-    .big{
-        font-size: 1.3em;
-        margin: 0.2em;
-        text-align: center;
-    }
-    .star{
-        display: none;
-    }
-    #content{
-    display: none;
-    }
-    /*Menu Déroulant (Sidebar) : changement de position du bouton de menu déroulant-------------------------------------------------------------------*/
-
-#sidebar .toggle-btn {
-    position: absolute;
-    left: 280px;
-    top: 5px;
-}
-
-    /*-------------------------------------------------------------------*/
-    /*Compétences*/
-    #boiteFlexibleCompetence {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        margin-top: 70px;
-    }
-    .competence {
-        margin-top: 5%;
-        width: 350px;
-        height: 250px;
-        margin-left: 20px;
-        background-color: white;
-    }
-    #gauche {
-        width: 46%;
-        height: 66%;
-        position: relative;
-        top: 42px;
-        left: -90px;
-        background-color: white;
-    }
-
-    #droite {
-        width: 42.5%;
-        height: 66%;
-        position: relative;
-        bottom: 88px;
-        left: 185px;
-        background-color: white;
-    }
-    .comp p {
-        flex: 0 0 22%;
-        font-weight: bold;
-    }
-    .conteneur-barre {
-        flex: 0 0 65%;
-        background-color: white;
-    }
-    #traitCompetences1 {
-        background-color: yellow;
-        width: 94%;
-        height: 4px;
-        margin-top: 5px;
-    }
-    #traitCompetences2 {
-        background-color: #00bfff;
-        width: 94%;
-        height: 4px;
-        margin-top: 5px;
-    }
-    #traitCompetences3 {
-        background-color: #32cd32;
-        width: 95%;
-        height: 4px;
-        margin-top: 5px;
-    }
-    #traitCompetences4 {
-        background-color: orange;
-        width: 95%;
-        height: 4px;
-        margin-top: 5px;
-    }
-    /*----------------------------------------------------------*/
-    /*Section Compétences*/
-    section article:nth-child(2) {
-        height: 350vh;
-    }
-    /*----------------------------------------------------------*/
-    /*Section Réalisations*/
-    section article:nth-child(3) {
-        background-color: #d3d3d3;
-        width: 100%;
-        height: 200%;
-    }
-    #boiteFlexibleRealisations {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        margin-top: 5%;
-    }
-    /*----------------------------------------------------------*/
-    /*Experience*/
-    /*changement taille des ronds de la frise*/
-    .marker {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        border: 2px solid white;
-        background: red;
-        margin-top: 10px;
-        z-index: 9999;
-    }
-    /*------------------------------------------------------------*/
-    section article:nth-child(4) {
-        background-color: #c4c4c4;
-        width: 100%;
-        height: 200%;
-    }
-    .timeline-content p {
-        display: none;
-    }
-    /*----------------------------------------------------------*/
-    /*Centres d'intérêts*/
-    .centreInteret {
-        width: 100%;
-        height: 50%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 6%;
-        margin-left: 0%;
-    }
-    .interet img {
-        width: 140px;
-        height: 140px;
-        margin-top: 50px;
-    }
-    figcaption {
-        width: 300px;
-        font-size: 1.2em;
-    }
-
-    section article:nth-child(6) {
-        height: 170vh;
-    }
-    /*---------------------------------------------------------------------------*/
-    /*Contact*/
-    section article:nth-child(7) {
-        height: 380vh;
-    }
-    #boiteFlexibleContact {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        margin-top: 70px;
-    }
-    #boiteFlexibleContact2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 5%;
-    }
-    /*-------------------------------------------------------------------------------*/
-    #plume {
-        display: none;
-    }
-    .formulaireContact p {
-        margin-top: 6.2vh;
-        margin-bottom: 10vh;
-        font-size: 1.5em;
-        font-weight: bold;
-        text-align: center;
-    }
-    .BFC3 {
-        width: 50%;
-        height: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-  
-/*---------------------------------------------------------------------------------------------*/
+    min-height: 40vh;
+    cursor: pointer;
+    margin-bottom: 10vh;
     
-    
-    footer {
-        width: 100%;
-        height: 30vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #555d5e;
-    }
-    /*Taille image dans le */
-    .imagesFooter {
-        width: 12vw;
-        height: 15vh;
-        margin: 3px 20px;
-    }
-    footer p{
-        text-align: center;
-    }
 }
+.coordonnees h2{
+    color: black;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 8vh;
+}
+#enteteTelephone {
+    background-color: orange;
+    height: 16vh;
+}
+#enteteMail {
+    background-color: #00bfff;
+    height: 16vh;
+}
+#enteteAdresse {
+    background-color: #32cd32;
+    height: 16vh;
+}
+.imgCoordonnees{
+    width: 100%;
+    height: 100%;  
+}
+/*---------------------------------------------------------------------------------*/
+    /*Hobbies*/
+    .centreInteret {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+      
+    }
+   
+    figcaption {
+        font-size: 1.0rem;
+        margin-bottom: 8vh;
+        /* display: none; */
+    }
+
+}
+

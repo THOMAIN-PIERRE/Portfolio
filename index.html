@@ -3,260 +3,413 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portfolio</title>
-        <link href="style.css" rel="stylesheet" />
-        <link
-            href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-            rel="stylesheet"
-        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Fiche Profil</title>
+        <link rel="stylesheet" href="style.css" />
+        
+
     </head>
-    <script>
-                /*Animation apparition de la sidebar------------------------------------------------------------------------*/
-                function toggleSidebar() {
-        document.getElementById("sidebar").classList.toggle('active');
-    }
-    /*Animation transformation de l'icône menu en barre après le clic-----------------------------------------------*/
-    function myFunction(x) {
-        x.classList.toggle("change");
-    }
-    </script>
+
     <body>
-        <main>
-                <div id="sidebar">
-                        <div class="toggle-btn" onclick="myFunction(this); toggleSidebar();">
-                                <span class=bar1></span>
-                                <span class=bar2></span>
-                                <span class=bar3></span>
+        <div id="sidebar">
+            <div
+                class="toggle-btn"
+                onclick="myFunction(this); toggleSidebar();"
+            >
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
+            <ul>
+                <li><a href="#name">ACCUEIL</a></li>
+
+                <li><a href="#TitreAPropos">A PROPOS</a></li>
+
+                <li><a href="#TitreCompetences">COMPETENCES</a></li>
+
+                <li><a href="#Realisations">REALISATIONS</a></li>
+
+                <li><a href="#experiences">EXPERIENCES</a></li>
+
+                <li><a href="#diplomes">DIPLOMES</a></li>
+
+                <li><a href="#hobbies">HOBBIES</a></li>
+
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+        <header>
+                <p id="name">PIERRE THOMAIN</p>
+                <hr>
+                <h2 class="poste">CV DEVELOPPEUR WEB JUNIOR</h2>
+        </header>
+        <!-- <section class="apropos"> -->
+        <h1 id="TitreAPropos">A PROPOS</h1>
+        <h4>"Mon profil en quelques mots"</h4>
+              
+        <!-- <div class="container"></div> -->
+        <div class="conteneur">
+                    <img
+                        id="photoPierre"
+                        src="dossierimage/Photo_Pierre.png"
+                        alt="Photo_Pierre"
+                    />
+
+
+
+                    <p id="text" text-align="left"> 
+                       
+                        <!-- <img
+                        id="photoPierre"
+                        style="float:left" padding-right="20px;"
+                    /> -->
+                    Développeur web curieux, autonome, j’aime les applications simples et efficaces. Consciencieux, je suis motivé par le besoin de faire toujours mieux et suis toujours prêt à relever de nouveaux challenges. Ma formation m’a permis d’acquérir de solides bases en programmation, en modélisation et m’a donné l’opportunité de travailler sur des projets divers et variés. J’ai pu développer une vraie expertise technique en nourrie par une veille technologique régulière. Ma force réside dans le sens de l’écoute et du service que j’ai hérité de mes expériences professionnelles antérieures dans le domaine de la biologie moléculaire. 
+                       
+
+    
+                </p>
+             
+        </div>
+ 
+
+
+
+<!-- <div class="conteneur">
+    <div class="circle"></div>
+    <h2 id="intitule"> QUI SUIS-JE ? MON PROJET !</h2>
+
+            <p id="text">
+                Développeur web curieux, autonome,
+                rigoureux, j'aime les applications simples
+                et efficaces. Un sens de l’écoute et du
+                service renforcé par 10 années d’expérience
+                en milieu professionnel. J’ai eu l’occasion
+                de travailler sur des projets variés, qui
+                m’ont permis de développer une vrais
+                expertise technique en constante progression
+                grâce à une formation perpetuelle. Motivé
+                par le besoin de faire toujours mieux et
+                fondé sur de solides bases acquises lors de
+                ma formation, je prends plaisir à relever de
+                nouveaux challenges. -->
+
+
+        </p>
+    </div>
+<!-- </section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <h1 id="TitreCompetences">COMPETENCES</h1>
+        <h4>"Autodidacte, une vraie soif d'apprendre"</h4>
+
+                     <div class="comp">
+                        <div class="conteneur-barre">
+                            <span class="barre HTML">HTML 50%</span>
                         </div>
-                        <ul>
-                            
-                        
-                                    <li><a href=".name">ACCUEIL</a></li>
-                                    <li><a href="#TitreAPropos">A PROPOS</a></li>
-                                    <li><a href="#TitreCompetences">COMPETENCES</a></li>
-                                    <li><a href="#">REALISATION</a></li>
-                                    <li><a href="#">EXPERIENCE</a></li>
-                                    <li><a href="#">DIPLOMES</a></li>
-                                    <li><a href="#">HOBBIES</a></li>
-                                    <li><a href="#">CONTACT</a></li>
-                                
-                            
-                        </ul>
                     </div>
-            <header>
-                <p class="name">PIERRE THOMAIN</p>
-                <hr />
-                <p class="animation A big">CV DEVELOPPEUR WEB JUNIOR</p>
-            </header>
-            <!--<nav>
-                <ul>
-                    <li>ACCUEIL</li>
-                    <li>A PROPOS</li>
-                    <li>COMPETENCES</li>
-                    <li>REALISATIONS</li>
-                    <li>EXPERIENCE</li>
-                    <li>DIPLOMES</li>
-                    <li>HOBBIES</li>
-                    <li>CONTACT</li>
-                </ul>
-            </nav>-->
-            <section>
-                <article>
-                    <h1 id="TitreAPropos">A PROPOS</h1>
-                        <div id="board">
-                            <div id="content">
-                                <p id="title">Episode V</p>
-                                <p id="subtitle">L'Etudiant Contre Attaque</p>
-                                <br/>
-                                <p id="text">
-                                    Développeur web curieux, autonome,
-                                    rigoureux, j'aime les applications simples
-                                    et efficaces. Un sens de l’écoute et du
-                                    service renforcé par 10 années d’expérience
-                                    en milieu professionnel. J’ai eu l’occasion
-                                    de travailler sur des projets variés, qui
-                                    m’ont permis de développer une vrais
-                                    expertise technique en constante progression
-                                    grâce à une formation perpetuelle. Motivé
-                                    par le besoin de faire toujours mieux et
-                                    fondé sur de solides bases acquises lors de
-                                    ma formation, je prends plaisir à relever de
-                                    nouveaux challenges.<br /><br /><br />
-                                    <img
-                                        id="photoPierre"
-                                        src="dossierimage/Photo_Pierre.png"
-                                        alt="Photo_Pierre"
-                                    />
-                                </p>
+                    <div class="comp">
+                        <div class="conteneur-barre">
+                            <span class="barre CSS">CSS 60%</span>
+                        </div>
+                    </div>
+                    <div class="comp">
+                        <div class="conteneur-barre">
+                            <span class="barre JS">JS 30%</span>
+                        </div>
+                    </div>
+                    <div class="comp">
+                        <div class="conteneur-barre">
+                            <span class="barre php">PHP 5%</span>
+                        </div>
+                    </div>
+                    <div class="comp">
+                        <div class="conteneur-barre">
+                            <span class="barre MySQL">MySQL 5%</span>
+                        </div>
+                    </div>
+
+                    <div class="comp">
+                        
+                        <div class="conteneur-barre">
+                            <span class="barre VBA">VBA 75%</span>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+
+
+        
+                    <div class="competences">
+                        <div class="competencesMetier">
+                            <p id="enteteFE"><img id="compAnimation" class="animationFE" src="dossierimage/front-end.svg" alt="Compétences Front-End"></p>
+                            <p class="type">Front-End</p>
+                            <div class="compImage">
+                            <img class="compLogo" src="dossierimage/800px-HTML5_logo_and_wordmark.svg (1) PIT.png" alt="HTML">
+                            <img class="compLogo" src="dossierimage/CSS3_logo_and_wordmark.svg" alt="CSS">
+                            <img class="compLogo" src="dossierimage/JavaScript_logo_2.svg.png" alt="JS">
+                            <img class="compLogo" src="dossierimage/jquery (1).png" alt="jQuery">
+                            <img class="compLogo" src="dossierimage/wordpress.png" alt="Wordpress">
+                            <img class="compLogo" src="dossierimage/RWDResponsive.png" alt="Responsive Web Design">
+                            </div>
+                        </div>
+                        <div class="competencesMetier">
+                            <p id="enteteBE"><img id="compAnimation" class="animationBE" src="dossierimage/engrenage.svg" alt="Compétences Back-End"></p>
+                            <p class="type">Back-End</p>
+                            <div class="compImage">
+                            <img class="compLogo" src="dossierimage/PHP-logo.svg" alt="PHP">
+                            <img class="compLogo" src="dossierimage/logo-mysql-170x115.png" alt="MySQL">
+                            <img class="compLogo" src="dossierimage/wordpress.png" alt="Wordpress">
+                            </div>
+                        </div>
+                        <div class="competencesMetier">
+                            <p id="enteteT"><img id="compAnimation" class="animationT" src="dossierimage/plus.svg" alt="Compétences Transverses"></p>
+                            <p class="type">Transverses</p>
+                            <div class="compImage">
+                            <img class="compLogo" src="dossierimage/scrum.svg" alt="Méthode Agile">
+                            <img class="compLogo" src="dossierimage/UI_UX.png" alt="UI-UX">
+                            <img class="compLogo" src="dossierimage/microsoft-office.jpg" alt="Microsoft Pack Office">
+                            <img class="compLogo" src="dossierimage/ubuntu.jpeg" alt="Linux Ubuntu">
+                            <img class="compLogo" src="dossierimage/Figma.png" alt="Figma">
+                            <img class="compLogo" src="dossierimage/UML_logo.svg.png" alt="UML">
                             </div>
                         </div>
                     </div>
-                </div>
-                </article>
-                <article>
-                    <h1 id="TitreCompetences">COMPETENCES</h1>
-                    <h4>Autodidacte, une vraie soir d'apprendre</h4>
-                    <div class="boiteFlexibleGénérale">
-                            <div class="boiteFlexibleSecondaire">
-                                <div class="boiteFlexible1">
-                                    <div class="element1" id="enteteFrontEnd"><img id="animationFE" src="dossierimage/front-end.svg" alt="Compétences Front-End"></div>
-                                    <div class="element2">
-                                            <p>Front-End</p>
-                                            <div class="compFE">
-                                            <img src="dossierimage/800px-HTML5_logo_and_wordmark.svg (1) PIT.png" alt="HTML">
-                                            <img src="dossierimage/CSS3_logo_and_wordmark.svg" alt="CSS">
-                                            <img src="dossierimage/JavaScript_logo_2.svg.png" alt="JS">
-                                            <img src="dossierimage/jquery (1).png" alt="jQuery">
-                                            <img src="dossierimage/wordpress.png" alt="Wordpress">
-                                            <img src="dossierimage/RWDResponsive.png" alt="Responsive Web Design">
-                                            </div>
-                                    </div>
-                                    <hr class="element3" id="traitFrontEnd">
+
+
+                    <!-- <div class="competences">
+                        <div class="competencesMetier">
+                            <p id="enteteFE"><img id="compAnimation" class="animationFE" src="dossierimage/front-end.svg" alt="Compétences Front-End"></p>
+                            <img class="compLogo" src="dossierimage/800px-HTML5_logo_and_wordmark.svg (1) PIT.png" alt="HTML">
+                            <img class="compLogo" src="dossierimage/CSS3_logo_and_wordmark.svg" alt="CSS">
+                            <img class="compLogo" src="dossierimage/JavaScript_logo_2.svg.png" alt="JS">
+                            <img class="compLogo" src="dossierimage/jquery (1).png" alt="jQuery">
+                            <img class="compLogo" src="dossierimage/wordpress.png" alt="Wordpress">
+                            <img class="compLogo" src="dossierimage/RWDResponsive.png" alt="Responsive Web Design">   
+                        </div>
+                        <div class="competencesMetier">
+                            <p id="enteteBE"><img id="compAnimation" class="animationBE" src="dossierimage/engrenage.svg" alt="Compétences Back-End"></p>
+                            <img class="compLogo" src="dossierimage/PHP-logo.svg" alt="PHP">
+                            <img class="compLogo" src="dossierimage/logo-mysql-170x115.png" alt="MySQL">
+                            <img class="compLogo" src="dossierimage/wordpress.png" alt="Wordpress">      
+                        </div>
+                        <div class="competencesMetier">
+                            <p id="enteteT"><img id="compAnimation" class="animationT" src="dossierimage/plus.svg" alt="Compétences Transverses"></p>
+                            <img class="compLogo" src="dossierimage/scrum.svg" alt="Méthode Agile">
+                            <img class="compLogo" src="dossierimage/UI_UX.png" alt="UI-UX">
+                            <img class="compLogo" src="dossierimage/microsoft-office.jpg" alt="Microsoft Pack Office">
+                            <img class="compLogo" src="dossierimage/ubuntu.jpeg" alt="Linux Ubuntu">
+                            <img class="compLogo" src="dossierimage/Figma.png" alt="Figma">
+                            <img class="compLogo" src="dossierimage/UML_logo.svg.png" alt="UML">   
+                        </div>
+                    </div>
+
+                    <div id="CV">
+                        <img class="CV" src="dossierimage/photoCVPierre.png"
+                             alt="CV Pierre"> -->
+                        <!-- <p>Téléchargez le CV</p> -->
+                        <!-- <p><a class="formulaireContact" href="formulaire.html">ACCES AU FORMULAIRE DE CONTACT</a></p>
+                    </div>
+                    <div class="contact">
+                        <div class="coordonnees">
+                            <p id="enteteTelephone"><img
+                                class="imgCoordonnees" id="animationTelephone"
+                                src="dossierimage/smartphone.svg"
+                                alt="image projet"
+                            /></p>
+                                <h2>+33 6 73 87 65 46</h2>    
+                        </div>
+                        <div class="coordonnees">
+                            <p id="enteteMail"><img
+                                class="imgCoordonnees" id="animationMail"
+                                src="dossierimage/email.svg"
+                                alt="image projet"
+                            /></p>
+                                <h2>pierrethomain@yahoo.fr</h2>       
+                        </div>
+                        <div class="coordonnees">
+                            <p id="enteteAdresse"><img
+                                class="imgCoordonnees" id="animationAdresse"
+                                src="dossierimage/placeholder-for-map.svg"
+                                alt="image projet"
+                                /></p>
+                                <h2>10 Bis avenue d'Aspe<br> 64400 BIDOS</h2>    
+                        </div>
+                    </div> -->
+
+                        <!-- <div class="element1" id="enteteBackEnd"><img id="animationBE" src="dossierimage/engrenage.svg" alt="Compétences Back-End"></div>
+                        <div class="element2">
+                                <p>Back-End</p>
+                                <div class="compBE">
+                                        <img src="dossierimage/PHP-logo.svg" alt="PHP">
+                                        <img src="dossierimage/logo-mysql-170x115.png" alt="MySQL">
+                                        <img src="dossierimage/wordpress.png" alt="Wordpress">
                                 </div>
-                                <div class="boiteFlexible2">
-                                    <div class="element1" id="enteteBackEnd"><img id="animationBE" src="dossierimage/engrenage.svg" alt="Compétences Back-End"></div>
-                                    <div class="element2">
-                                            <p>Back-End</p>
-                                            <div class="compBE">
-                                                    <img src="dossierimage/PHP-logo.svg" alt="PHP">
-                                                    <img src="dossierimage/logo-mysql-170x115.png" alt="MySQL">
-                                                    <img src="dossierimage/wordpress.png" alt="Wordpress">
-                                            </div>
-                                    </div>
-                                    <hr class="element3" id="traitBackEnd">
+                        </div>
+                        <hr class="element3" id="traitBackEnd">
+                    </div>
+                    <div class="boiteFlexible3">
+                        <div class="element1" id="enteteTransverses"><img id="animationTransverses" src="dossierimage/plus.svg" alt="Compétences Transverses"></div>
+                        <div class="element2">
+                                <p>Transverses</p>
+                                <div class="compT">
+                                        <img src="dossierimage/scrum.svg" alt="Méthode Agile">
+                                        <img src="dossierimage/UI_UX.png" alt="UI-UX">
+                                        <img src="dossierimage/microsoft-office.jpg" alt="Microsoft Pack Office">
+                                        <img src="dossierimage/ubuntu.jpeg" alt="Linux Ubuntu">
+                                        <img src="dossierimage/Figma.png" alt="Figma">
+                                        <img src="dossierimage/UML_logo.svg.png" alt="UML">
                                 </div>
-                                <div class="boiteFlexible3">
-                                    <div class="element1" id="enteteTransverses"><img id="animationTransverses" src="dossierimage/plus.svg" alt="Compétences Transverses"></div>
-                                    <div class="element2">
-                                            <p>Transverses</p>
-                                            <div class="compT">
-                                                    <img src="dossierimage/scrum.svg" alt="Méthode Agile">
-                                                    <img src="dossierimage/UI_UX.png" alt="UI-UX">
-                                                    <img src="dossierimage/microsoft-office.jpg" alt="Microsoft Pack Office">
-                                                    <img src="dossierimage/ubuntu.jpeg" alt="Linux Ubuntu">
-                                                    <img src="dossierimage/Figma.png" alt="Figma">
-                                                    <img src="dossierimage/UML_logo.svg.png" alt="UML">
-                                            </div>
-                                    </div>
-                                    <hr class="element3" id="traitTransverses">
+                        </div>
+                        <hr class="element3" id="traitTransverses">
+                    </div> -->
+                    <!-- <div class="boiteFlexible4">
+                        <div class="element1" id="enteteRelationnelles"><img id="animationRelationnelles" src="dossierimage/hand-shake.svg" alt="Compétences Relationnelles"></div>
+                        <div class="element2">
+                                <p>Relationnelles</p>
+                                <div class="compR">
+                                        <p>Efficacité | Autonomie | Réflexivité</p>
                                 </div>
-                                <div class="boiteFlexible4">
-                                    <div class="element1" id="enteteRelationnelles"><img id="animationRelationnelles" src="dossierimage/hand-shake.svg" alt="Compétences Relationnelles"></div>
-                                    <div class="element2">
-                                            <p>Relationnelles</p>
-                                            <div class="compR">
-                                                    <p>Efficacité | Autonomie | Réflexivité</p>
-                                            </div>
-             
-                                    </div>
-                                    <hr class="element3" id="traitRelationnelles">
-                                </div>         
-                    <div class="comp">
-                        <p>HTML</p>
+ 
+                        </div> -->
+                        <!-- <hr class="element3" id="traitRelationnelles"> -->
+                    
+                   
+                    <!-- <div class="comp">
+                       
                         <div class="conteneur-barre">
-                            <span class="barre HTML">50%</span>
+                            <span class="barre HTML">HTML 50%</span>
                         </div>
                     </div>
                     <div class="comp">
                         <p>CSS</p>
                         <div class="conteneur-barre">
-                            <span class="barre CSS">60%</span>
+                            <span class="barre CSS">CSS 60%</span>
                         </div>
                     </div>
                     <div class="comp">
                         <p>JS</p>
                         <div class="conteneur-barre">
-                            <span class="barre JS">30%</span>
+                            <span class="barre JS">JS 30%</span>
                         </div>
                     </div>
                     <div class="comp">
                         <p>PHP</p>
                         <div class="conteneur-barre">
-                            <span class="barre php">5%</span>
+                            <span class="barre php">PHP 5%</span>
                         </div>
                     </div>
                     <div class="comp">
-                        <p>MySQL</p>
+                        
                         <div class="conteneur-barre">
-                            <span class="barre MySQL">5%</span>
+                            
+                            <span class="barre MySQL">MySQL 5%</span>
                         </div>
                     </div>
 
                     <div class="comp">
                         <p>VBA</p>
                         <div class="conteneur-barre">
-                            <span class="barre VBA">75%</span>
+                            <span class="barre VBA">VBA 75%</span>
                         </div>
                     </div>
                     </div>
-                    </div>
-                </article>
-                <article>
-                    <h1>REALISATIONS</h1>
-                    <h4>Une sélection de projets parmis les plus récents</h4>
-                    <div id="boiteFlexibleRealisations">
-                        <div class="projContainer">
-                            <img
-                                src="dossierimage/Aquitaine Landes Récifs 2.png"
-                            />
-                            <div class="projInfoContainer">
-                                <h2>Projet 1</h2>
-                                <p class="projCat">Site Internet - Atlantique Landes Récifs</p>
-                                <p class="projSpec">
-                                    Refonte du site internet d'une association Landaise impliquée dans la préservation de la faune et de la flore marine.<br>
-                                <a href="">En savoir plus</a>
-                                </p>
-                            </div>
-                        </div>
+                    </div> -->
+                    
 
-                        <div class="projContainer">
-                            <img
-                                src="dossierimage/Aquitaine Landes Récifs 2.png"
-                            />
-                            <div class="projInfoContainer">
-                                <h2>Projet 2</h2>
-                                <p class="projCat">Category</p>
-                                <p class="projSpec">
-                                    Stuff about this project.<br />More stuff
-                                    about it, too
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="projContainer">
-                            <img
-                                src="dossierimage/Aquitaine Landes Récifs 2.png"
-                            />
-                            <div class="projInfoContainer">
-                                <h2>Projet 3</h2>
-                                <p class="projCat">Category</p>
-                                <p class="projSpec">
-                                    Stuff about this project.<br />More stuff
-                                    about it, too
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="projContainer">
+
+
+
+
+
+
+                    
+                    font-size: 1.0rem;
+                    margin-bottom: 8vh;
+                    <h1 id="Realisations">REALISATIONS</h1>
+                    <h4>"Une sélection de projets parmis les plus récents"</h4>
+
+                    <div class="realisations">
+                        <div class="projet">
                             <img
-                                src="dossierimage/Aquitaine Landes Récifs 2.png"
-                            />
-                            <div class="projInfoContainer">
-                                <h2>Projet 4</h2>
-                                <p class="projCat">Category</p>
-                                <p class="projSpec">
-                                    Stuff about this project.<br />More stuff
-                                    about it, too
-                                </p>
-                            </div>
+                            id="imgProjet"
+                            src="dossierimage/Aquitaine Landes Récifs 2.png"
+                            alt="image projet"
+                        />
+                            <h2>Nom du projet</h2>
+                            <p class="categorie">Categorie</p>
+                            <p class="description">Description</p>    
+                        </div>
+                        <div class="projet">
+                            <img
+                            id="imgProjet"
+                            src="dossierimage/Aquitaine Landes Récifs 2.png"
+                            alt="image projet"
+                        />
+                            <h2>Nom du projet</h2>
+                            <p class="categorie">Categorie</p>
+                            <p class="description">Description</p>    
+                        </div>
+                        <div class="projet">
+                            <img
+                            id="imgProjet"
+                            src="dossierimage/Aquitaine Landes Récifs 2.png"
+                            alt="image projet"
+                        />
+                            <h2>Nom du projet</h2>
+                            <p class="categorie">Categorie</p>
+                            <p class="description">Description</p>     
+                        </div>
+                        <div class="projet">
+                            <img
+                            id="imgProjet"
+                            src="dossierimage/Aquitaine Landes Récifs 2.png"
+                            alt="image projet"
+                        />
+                            <h2>Nom du projet</h2>
+                            <p class="categorie">Categorie</p>
+                            <p class="description">Description</p>     
+                        </div>
+                        <div class="projet">
+                            <img
+                            id="imgProjet"
+                            src="dossierimage/Aquitaine Landes Récifs 2.png"
+                            alt="image projet"
+                        />
+                            <h2>Nom du projet</h2>
+                            <p class="categorie">Categorie</p>
+                            <p class="description">Description</p>   
                         </div>
                     </div>
-                </article>
-                <article>
-                    <h1>EXPERIENCES</h1>
+
+
+
+
+
+
+
+
+
+                    
+
+
+
+                    <h1 id="experiences">EXPERIENCES</h1>
                     <h4>
-                        Polyvalent, je m'adapte rapidement au contexte
-                        professionnel
+                        "Polyvalent, je m'adapte rapidement au contexte
+                        professionnel"
                     </h4>
 
                     <div class="container">
@@ -349,9 +502,10 @@
                                 </div>
                             </div>
                     </div>
-                </article>
-                <article>
-                    <h1>DIPLÔMES</h1>
+
+
+
+                    <h1 id="diplomes">DIPLÔMES</h1>
                     <h4>Pluridisciplinarité, méthode scientifique</h4>
                     <!--<p id="licence">
                         Licence de Biologie Cellulaire et Physiologie
@@ -361,14 +515,44 @@
                         Titre professionnel de niveau III - Développeur Web et
                         Web Mobile
                     </p>-->
-                    <div id="boiteFlexibleDiplomes">
-                        <div class="un">2005<br>Licence de Biologie Cellulaire et Physiologie</div>
-                        <div class="deux">2007<br>Master de Microbiologie</div>
-                        <div class="trois">2019<br>Titre Professionnel de niniveau III - Développeur Web et Web Mobile</div>
+                    <!-- <div id="boiteFlexibleDiplomes">
+                        <div class="diplome"><img src="dossierimage/Université_Bordeaux_2_(logo_2011).svg.png" alt="logo université"/>Licence de Biologie Cellulaire et Physiologie</div>
+                        <div class="diplome"><img src="dossierimage/Université_Bordeaux_2_(logo_2011).svg.png" alt="logo université"/>Master de microbiologie</div>
+                        <div class="diplome"><img src="dossierimage/Simplon-polygone-pau.png" alt="logo université"/>Titre Professionnel de niniveau III - Développeur Web et Web Mobile</div>
+                        <!-- <div class="deux">2007<br>Master de Microbiologie</div>
+                        <div class="trois">2019<br>Titre Professionnel de niniveau III - Développeur Web et Web Mobile</div> -->
+                    <div class="diplomesObtenus">
+                    <div class="diplome1">
+                        <p><b>2005</b></p>
+                        <p>Licence Biologie Cellulaire</p>
+                        <img
+                        id="imgDiplome"
+                        src="./dossierimage/Université_Bordeaux_2_(logo_2011).svg.png"
+                        alt="logoUniversité"
+                    />
                     </div>
-                </article>
-                <article>
-                    <h1>HOBBIES</h1>
+                    <div class="diplome2">
+                        <p><b>2007</b></p>
+                        <p>Master de Microbiologie</p>
+                        <img
+                        id="imgDiplome"
+                        src="./dossierimage/Université_Bordeaux_2_(logo_2011).svg.png"
+                        alt="logoUniversité"
+                    />
+                    </div>
+                    <div class="diplome3">
+                        <p><b>2020</b></p>
+                        <p>Titre professionnel <br> Développeur web</p>
+                        <img
+                        id="imgDiplome"
+                        src="./dossierimage/Simplon-polygone-pau.png"
+                        alt="logoUniversité"
+                    />
+                    </div>
+                    </div>
+
+
+                    <h1 id="hobbies">HOBBIES</h1>
                     <h4>
                         Des goûts éclectiques, l'envie de faire et
                         d'expérimenter
@@ -381,7 +565,7 @@
                             />
                             <figcaption>
                                 <b>FOOTBALL</b><br />
-                                (Ligue Occitanie - Niveau Régional 3)
+                                (Niveau Régional 3)
                             </figcaption>
                         </figure>
                         <figure class="interet">
@@ -390,8 +574,7 @@
                                 alt="Randonnées"
                             />
                             <figcaption>
-                                <b>RANDONNEES</b><br />(Vallée d'Aspe, d'Ossau,
-                                ...)
+                                <b>RANDONNEES</b><br />(Vallée d'Aspe, d'Ossau, ...)
                             </figcaption>
                         </figure>
                         <figure class="interet">
@@ -401,7 +584,7 @@
                             />
                             <figcaption>
                                 <b>LECTURE</b><br />
-                                (Science Fiction, Biographie, ...)
+                                (Science Fiction, Biographies...)
                             </figcaption>
                         </figure>
 
@@ -416,27 +599,74 @@
                             </figcaption>
                         </figure>
                     </div>
-                </article>
-                <article>
-                    <h1>CONTACT</h1>
+
+
+                    <h1 id="contact">CONTACT</h1>
                     <h4>N'hésitez pas à me contacter !</h4>
+                    <div id="CV">
+                        <img class="CV" src="dossierimage/photoCVPierre.png"
+                             alt="CV Pierre">
+                        <!-- <p>Téléchargez le CV</p> -->
+                        <p><a class="formulaireContact" href="formulaire.html">FORMULAIRE DE CONTACT</a></p>
+                    </div>
+                    <div class="contact">
+                        <div class="coordonnees">
+                            <p id="enteteTelephone"><img
+                                class="imgCoordonnees" id="animationTelephone"
+                                src="dossierimage/smartphone.svg"
+                                alt="image projet"
+                            /></p>
+                                <h2>+33 6 73 87 65 46</h2>    
+                        </div>
+                        <div class="coordonnees">
+                            <p id="enteteMail"><img
+                                class="imgCoordonnees" id="animationMail"
+                                src="dossierimage/email.svg"
+                                alt="image projet"
+                            /></p>
+                                <h2>pierrethomain@yahoo.fr</h2>       
+                        </div>
+                        <div class="coordonnees">
+                            <p id="enteteAdresse"><img
+                                class="imgCoordonnees" id="animationAdresse"
+                                src="dossierimage/placeholder-for-map.svg"
+                                alt="image projet"
+                                /></p>
+                                <h2>10 Bis avenue d'Aspe<br> 64400 BIDOS</h2>    
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- <p><a class="formulaireContact" href="formulaire.html">ACCES AU FORMULAIRE DE CONTACT</a></p>
                     <div class="boiteFlexibleGénéraleContact">
                             <div class="boiteFlexibleSecondaireContact">
-                                <div class="boiteFlexible1Contact">
+                                <div class="boiteFlexible1Contact" id="contact">
                                     <div class="element1Contact" id="enteteTelephone"><img id="animationTelephone" src="dossierimage/smartphone.svg" alt="Compétences Front-End"></div>
                                     <div class="element2Contact">
                                             <p>+33 6 73 87 65 46</p>                                                                                       
                                     </div>
                                     <hr class="element3Contact" id="traitTelephone">
                                 </div>
-                                <div class="boiteFlexible2Contact">
+                                <div class="boiteFlexible2Contact" id="contact">
                                     <div class="element1Contact" id="enteteMail"><img id="animationMail" src="dossierimage/email.svg" alt="Compétences Back-End"></div>
                                     <div class="element2Contact">
                                             <p>pierrethomain@yahoo.fr</p>
                                     </div>
                                     <hr class="element3Contact" id="traitMail">
                                 </div>
-                                <div class="boiteFlexible3Contact">
+                                <div class="boiteFlexible3Contact" id="contact">
                                     <div class="element1Contact" id="enteteAdresse"><img id="animationAdresse" src="dossierimage/placeholder-for-map.svg" alt="Compétences Transverses"></div>
                                     <div class="element2Contact">
                                             <p>10 Bis avenue d'Aspe<br> 64400 BIDOS</p>
@@ -444,58 +674,116 @@
                                     <hr class="element3Contact" id="traitAdresse">
                                 </div>
                             </div>
-                            <div id="CV">
-                                    <img class="CV" src="dossierimage/photoCVPierre.png"
-                                         alt="CV Pierre">
-                                    <p>Téléchargez le CV</p>
-                            </div>
-                            <p><a class="formulaireContact" href="">ACCES AU FORMULAIRE DE CONTACT</a></p>
+                        </div>
+                            -->
 
-                    <!--<div id="boiteFlexibleFormulaire">
-                            <div class="BFC3">
-                            <div class="formulaireContact">
-                               
-                                <p><a href="">ACCES AU FORMULAIRE DE CONTACT</a></p>
-                            </div>
-                            <div class="frameCV">
-                                <img
-                                    class="CV"
-                                    src="dossierimage/photoCVPierre.png"
-                                    alt="CV PIERRE"
-                                />
-                                <p>Télécharger le CV</p>
+                    <!-- <div>
+                    <h1>REALISATIONS</h1>
+                    <h4>Une sélection de projets parmis les plus récents</h4>
+                    </div> -->
+                    <!-- <div id="boiteFlexibleRealisations">
+                        <div class="projContainer">
+                            <img
+                                src="dossierimage/Aquitaine Landes Récifs 2.png"
+                            />
+                            <div class="projInfoContainer">
+                                <h2>Projet 1</h2>
+                                <p class="projCat">Site Internet - Atlantique Landes Récifs</p>
+                                <p class="projSpec">
+                                    Refonte du site internet d'une association Landaise impliquée dans la préservation de la faune et de la flore marine.<br>
+                                <a href="">En savoir plus</a>
+                                </p>
                             </div>
                         </div>
-                    </div>-->
-                </article>
+
+                        <div class="projContainer">
+                            <img
+                                src="dossierimage/Aquitaine Landes Récifs 2.png"
+                            />
+                            <div class="projInfoContainer">
+                                <h2>Projet 2</h2>
+                                <p class="projCat">Category</p>
+                                <p class="projSpec">
+                                    Stuff about this project.<br />More stuff
+                                    about it, too
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="projContainer">
+                            <img
+                                src="dossierimage/Aquitaine Landes Récifs 2.png"
+                            />
+                            <div class="projInfoContainer">
+                                <h2>Projet 3</h2>
+                                <p class="projCat">Category</p>
+                                <p class="projSpec">
+                                    Stuff about this project.<br />More stuff
+                                    about it, too
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="projContainer">
+                            <img
+                                src="dossierimage/Aquitaine Landes Récifs 2.png"
+                            />
+                            <div class="projInfoContainer">
+                                <h2>Projet 4</h2>
+                                <p class="projCat">Category</p>
+                                <p class="projSpec">
+                                    Stuff about this project.<br />More stuff
+                                    about it, too
+                                </p>
+                            </div>
+                        </div>
+                    </div>       -->
+       
+
+
+
+
+
+
+        <footer>
+            <section id="boiteFlexibleFooter">
+                <!-- <img
+                    class="imagesFooter"
+                    src="dossierimage/icons8-facebook.svg"
+                    alt="logo_facebook"
+                /> -->
+                <img
+                    class="imagesFooter"
+                    src="dossierimage/icons8-linkedin.svg"
+                    alt="logo_linkedin"
+                />
+                <img
+                    class="imagesFooter"
+                    src="dossierimage/icons8-github.svg"
+                    alt="logo_github"
+                />
             </section>
-            <footer>
-                <section id="boiteFlexibleFooter">
-                    <img
-                        class="imagesFooter"
-                        src="dossierimage/icons8-facebook.svg"
-                        alt="logo_facebook"
-                    />
-                    <img
-                        class="imagesFooter"
-                        src="dossierimage/icons8-linkedin.svg"
-                        alt="logo_linkedin"
-                    />
-                    <img
-                        class="imagesFooter"
-                        src="dossierimage/icons8-github.svg"
-                        alt="logo_github"
-                    />
-                </section>
-                <div>
-                    <p>
-                        CV développeur Junior copyright 2019 Pierre Thomain -
-                            mentions légales
-                    </p>
-                </div>
-            </footer>
-        </main>
-        <script src="dossierjs/javascript.js">
+            <div>
+                <p>
+                    CV développeur Junior copyright 2019 - Pierre Thomain -
+                    mentions légales
+                </p>
+            </div>
+            <div><a id="cRetour" class="cInvisible" href="#name"></a></div>
+        </footer>
+        
+        <script src="dossierjs/javascript.js"></script>
+        <script src= "https://unpkg.com/scrollreveal"></script>
+        <script src="dossierjs/app.js"></script>
+        <script>
+            /*Animation apparition de la sidebar------------------------------------------------------------------------*/
+            function toggleSidebar() {
+                document.getElementById("sidebar").classList.toggle("active");
+            }
+            /*Animation transformation de l'icône menu en barre après le clic-----------------------------------------------*/
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
         </script>
     </body>
 </html>
